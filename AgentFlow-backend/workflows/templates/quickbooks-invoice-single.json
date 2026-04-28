@@ -1,0 +1,399 @@
+{
+  "name": "QuickBooks Invoice - Single Customer",
+  "meta": {
+    "description": "Process a single PDF invoice: extract customer details and line items, check QB for existing customer, create if needed, then create invoice with line items.",
+    "keywords": ["quickbooks", "invoice", "pdf", "customer", "ai-agent", "parse", "extract"],
+    "version": "1.0",
+    "createdDate": "2026-04-26",
+    "templateType": "invoice",
+    "category": "finance"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "const aiOutputString = $('AI Agent5').first().json.output;\n\nlet aiData;\ntry {\n  const cleaned = aiOutputString\n    .replace(/```json/g, '')\n    .replace(/```/g, '')\n    .trim();\n  aiData = JSON.parse(cleaned);\n} catch (e) {\n  throw new Error('AI Output parse failed: ' + aiOutputString);\n}\n\nif (!aiData.customerName) {\n  throw new Error('No customer name extracted from PDF: ' + JSON.stringify(aiData));\n}\n\nreturn {\n  json: {\n    customerName: aiData.customerName || '',\n    invoiceNumber: aiData.invoiceNumber || 'INV-001',\n    invoiceDate: aiData.invoiceDate || '2025-01-01',\n    dueDate: aiData.dueDate || '2025-01-31',\n    customerTotal: aiData.customerTotal || 0,\n    lineItems: aiData.lineItems || []\n  }\n};"
+      },
+      "id": "parse-ai-output",
+      "name": "Parse AI Output",
+      "position": [
+        112,
+        304
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "invoice-webhook",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "position": [
+        112,
+        464
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "webhookId": "invoice-webhook-trigger"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "data0",
+        "options": {}
+      },
+      "id": "extract-pdf",
+      "name": "Extract From PDF",
+      "position": [
+        112,
+        608
+      ],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Extract invoice details from the PDF text.\n\nReturn ONLY a valid JSON object — no explanation, no markdown, no code blocks:\n{\n  \"customerName\": \"string\",\n  \"invoiceNumber\": \"string\",\n  \"invoiceDate\": \"YYYY-MM-DD\",\n  \"dueDate\": \"YYYY-MM-DD\",\n  \"lineItems\": [\n    {\n      \"Description\": \"string\",\n      \"Quantity\": number,\n      \"UnitPrice\": number,\n      \"Amount\": number\n    }\n  ],\n  \"customerTotal\": number\n}\n\nIMPORTANT:\n- customerTotal must equal the sum of all lineItem Amounts\n- All numeric values MUST be numbers, not strings\n- Dates MUST be in YYYY-MM-DD format",
+        "options": {
+          "systemMessage": "You are a PDF invoice parser. Extract and return a JSON object with customer name, invoice details, and line items. IMPORTANT: Return ONLY raw JSON. Do NOT use markdown. Do NOT wrap in ```json. Do NOT add any explanation."
+        }
+      },
+      "id": "ai-agent",
+      "name": "AI Agent",
+      "position": [
+        112,
+        752
+      ],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "chat-model",
+      "name": "Chat Model",
+      "position": [
+        112,
+        912
+      ],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "BQHyPiRfKrLWajth",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "id": "memory",
+      "name": "Memory",
+      "position": [
+        112,
+        1072
+      ],
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {}
+      },
+      "id": "search-qb-customer",
+      "name": "Search QB Customer",
+      "position": [
+        912,
+        240
+      ],
+      "type": "n8n-nodes-base.quickbooks",
+      "typeVersion": 1,
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "MnSu3tcxxyouWr7u",
+          "name": "QuickBooks Online account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "check-customer-match",
+              "leftValue": "={{ $items('Search QB Customer').filter(c => {\n  const qbName = (c.json.DisplayName || '').replace(/\"/g, '').trim().toLowerCase();\n  const pdfName = $json.customerName.trim().toLowerCase();\n  return qbName === pdfName;\n}).length > 0 ? true : false }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "true"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-customer-exists",
+      "name": "If Customer Exists",
+      "position": [
+        1312,
+        304
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "displayName": "={{ $json.customerName }}",
+        "additionalFields": {
+          "FamilyName": "={{ $json.customerName.split(' ').slice(1).join(' ') || 'Customer' }}",
+          "GivenName": "={{ $json.customerName.split(' ')[0] }}"
+        }
+      },
+      "id": "create-qb-customer",
+      "name": "Create QB Customer",
+      "position": [
+        1712,
+        240
+      ],
+      "type": "n8n-nodes-base.quickbooks",
+      "typeVersion": 1,
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "MnSu3tcxxyouWr7u",
+          "name": "QuickBooks Online account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const customerName = $json.customerName;\nconst allCustomers = $items('Search QB Customer');\n\n// Find existing customer with matching name\nconst match = allCustomers.find(c => {\n  const qbName = (c.json.DisplayName || '').replace(/\"/g, '').trim().toLowerCase();\n  return qbName === customerName.trim().toLowerCase();\n});\n\n// Prefer existing customer over newly created\nlet customerId;\nif (match) {\n  customerId = match.json.Id;\n} else if ($json.Id) {\n  customerId = $json.Id;\n} else {\n  throw new Error('No customer ID found for: ' + customerName);\n}\n\nif (!customerId) {\n  throw new Error('Could not resolve QB customer ID for: ' + customerName);\n}\n\nconst lineItems = $('Parse AI Output').first().json.lineItems || [];\n\nconst qbLines = lineItems.map(item => ({\n  \"Amount\": Number(item.Amount),\n  \"Description\": String(item.Description),\n  \"DetailType\": \"SalesItemLineDetail\",\n  \"SalesItemLineDetail\": {\n    \"Qty\": Number(item.Quantity),\n    \"UnitPrice\": Number(item.UnitPrice),\n    \"ItemRef\": { \"value\": \"1\" }\n  }\n}));\n\nreturn {\n  json: {\n    customerName: customerName,\n    customerId: customerId.toString(),\n    invoiceNumber: $('Parse AI Output').first().json.invoiceNumber,\n    invoiceDate: $('Parse AI Output').first().json.invoiceDate,\n    dueDate: $('Parse AI Output').first().json.dueDate,\n    customerTotal: $('Parse AI Output').first().json.customerTotal,\n    qbLines: qbLines\n  }\n};"
+      },
+      "id": "format-qb-lines",
+      "name": "Format QB Lines",
+      "position": [
+        1712,
+        384
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "resource": "invoice",
+        "operation": "create",
+        "CustomerRef": "={{ $json.customerId }}",
+        "Line": "={{ $json.qbLines }}",
+        "additionalFields": {
+          "DocNumber": "={{ $json.invoiceNumber }}",
+          "TxnDate": "={{ $json.invoiceDate }}",
+          "DueDate": "={{ $json.dueDate }}"
+        }
+      },
+      "id": "create-qb-invoice",
+      "name": "Create QB Invoice",
+      "position": [
+        2112,
+        304
+      ],
+      "type": "n8n-nodes-base.quickbooks",
+      "typeVersion": 1,
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "MnSu3tcxxyouWr7u",
+          "name": "QuickBooks Online account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, invoiceId: $json.Id, invoiceNumber: $json.DocNumber, customerName: $json.CustomerRef.name }) }}",
+        "options": {}
+      },
+      "id": "respond-webhook",
+      "name": "Respond to Webhook",
+      "position": [
+        2512,
+        304
+      ],
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "AI Agent": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "Chat Model",
+            "type": "ai_languageModel"
+          }
+        ]
+      ],
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "Memory",
+            "type": "ai_memory"
+          }
+        ]
+      ],
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Parse AI Output",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_languageModel"
+          }
+        ]
+      ]
+    },
+    "Create QB Customer": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Format QB Lines",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Create QB Invoice": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Respond to Webhook",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Extract From PDF": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Format QB Lines": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Create QB Invoice",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "If Customer Exists": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Format QB Lines",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Create QB Customer",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Memory": {
+      "ai_memory": [
+        [
+          {
+            "index": 0,
+            "node": "AI Agent",
+            "type": "ai_memory"
+          }
+        ]
+      ]
+    },
+    "Parse AI Output": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Search QB Customer",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Search QB Customer": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "If Customer Exists",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Extract From PDF",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  }
+}

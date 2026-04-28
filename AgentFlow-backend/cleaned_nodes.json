@@ -1,0 +1,6029 @@
+[
+  {
+    "name": "n8n-nodes-base.actionNetwork",
+    "displayName": "Action Network",
+    "description": "Consume the Action Network API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.activeCampaign",
+    "displayName": "ActiveCampaign",
+    "description": "Create and edit data in ActiveCampaign",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.activeCampaignTrigger",
+    "displayName": "ActiveCampaign Trigger",
+    "description": "Handle ActiveCampaign events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.acuitySchedulingTrigger",
+    "displayName": "Acuity Scheduling Trigger",
+    "description": "Handle Acuity Scheduling events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.adalo",
+    "displayName": "Adalo",
+    "description": "Consume Adalo API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.affinity",
+    "displayName": "Affinity",
+    "description": "Consume Affinity API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.affinityTrigger",
+    "displayName": "Affinity Trigger",
+    "description": "Handle Affinity events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.agileCrm",
+    "displayName": "Agile CRM",
+    "description": "Consume Agile CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.airtable",
+    "displayName": "Airtable",
+    "description": "Read, update, write and delete data from Airtable",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.airtable",
+    "displayName": "Airtable",
+    "description": "Read, update, write and delete data from Airtable",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.airtableTrigger",
+    "displayName": "Airtable Trigger",
+    "description": "Starts the workflow when Airtable events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.airtop",
+    "displayName": "Airtop",
+    "description": "Scrape and control any site with Airtop",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.aiTransform",
+    "displayName": "AI Transform",
+    "description": "Modify data based on instructions written in plain english",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.amqp",
+    "displayName": "AMQP Sender",
+    "description": "Sends a raw-message via AMQP 1.0, executed once per item",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.amqpTrigger",
+    "displayName": "AMQP Trigger",
+    "description": "Listens to AMQP 1.0 Messages",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.apiTemplateIo",
+    "displayName": "APITemplate.io",
+    "description": "Consume the APITemplate.io API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.asana",
+    "displayName": "Asana",
+    "description": "Consume Asana REST API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.asanaTrigger",
+    "displayName": "Asana Trigger",
+    "description": "Starts the workflow when Asana events occur.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.automizy",
+    "displayName": "Automizy",
+    "description": "Consume Automizy API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.autopilot",
+    "displayName": "Autopilot",
+    "description": "Consume Autopilot API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.autopilotTrigger",
+    "displayName": "Autopilot Trigger",
+    "description": "Handle Autopilot events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.awsLambda",
+    "displayName": "AWS Lambda",
+    "description": "Invoke functions on AWS Lambda",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsSns",
+    "displayName": "AWS SNS",
+    "description": "Sends data to AWS SNS",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsSnsTrigger",
+    "displayName": "AWS SNS Trigger",
+    "description": "Handle AWS SNS events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.awsCertificateManager",
+    "displayName": "AWS Certificate Manager",
+    "description": "Sends data to AWS Certificate Manager",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsCognito",
+    "displayName": "AWS Cognito",
+    "description": "Sends data to AWS Cognito",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsComprehend",
+    "displayName": "AWS Comprehend",
+    "description": "Sends data to Amazon Comprehend",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsDynamoDb",
+    "displayName": "AWS DynamoDB",
+    "description": "Consume the AWS DynamoDB API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsElb",
+    "displayName": "AWS ELB",
+    "description": "Sends data to AWS ELB API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsIam",
+    "displayName": "AWS IAM",
+    "description": "Interacts with Amazon IAM",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsRekognition",
+    "displayName": "AWS Rekognition",
+    "description": "Sends data to AWS Rekognition",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsS3",
+    "displayName": "AWS S3",
+    "description": "Sends data to AWS S3",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsS3",
+    "displayName": "AWS S3",
+    "description": "Sends data to AWS S3",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsSes",
+    "displayName": "AWS SES",
+    "description": "Sends data to AWS SES",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsSqs",
+    "displayName": "AWS SQS",
+    "description": "Sends messages to AWS SQS",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsTextract",
+    "displayName": "AWS Textract",
+    "description": "Sends data to Amazon Textract",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsTranscribe",
+    "displayName": "AWS Transcribe",
+    "description": "Sends data to AWS Transcribe",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bambooHr",
+    "displayName": "BambooHR",
+    "description": "Consume BambooHR API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bannerbear",
+    "displayName": "Bannerbear",
+    "description": "Consume Bannerbear API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.baserow",
+    "displayName": "Baserow",
+    "description": "Consume the Baserow API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.beeminder",
+    "displayName": "Beeminder",
+    "description": "Consume Beeminder API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bitbucketTrigger",
+    "displayName": "Bitbucket Trigger",
+    "description": "Handle Bitbucket events via webhooks",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.bitly",
+    "displayName": "Bitly",
+    "description": "Consume Bitly API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bitwarden",
+    "displayName": "Bitwarden",
+    "description": "Consume the Bitwarden API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.box",
+    "displayName": "Box",
+    "description": "Consume Box API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.boxTrigger",
+    "displayName": "Box Trigger",
+    "description": "Starts the workflow when Box events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.Brandfetch",
+    "displayName": "Brandfetch",
+    "description": "Consume Brandfetch API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bubble",
+    "displayName": "Bubble",
+    "description": "Consume the Bubble Data API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.calTrigger",
+    "displayName": "Cal.com Trigger",
+    "description": "Handle Cal.com events via webhooks",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.calendlyTrigger",
+    "displayName": "Calendly Trigger",
+    "description": "Starts the workflow when Calendly events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.chargebee",
+    "displayName": "Chargebee",
+    "description": "Retrieve data from Chargebee API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.chargebeeTrigger",
+    "displayName": "Chargebee Trigger",
+    "description": "Starts the workflow when Chargebee events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.circleCi",
+    "displayName": "CircleCI",
+    "description": "Consume CircleCI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ciscoWebex",
+    "displayName": "Webex by Cisco",
+    "description": "Consume the Cisco Webex API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ciscoWebexTrigger",
+    "displayName": "Webex by Cisco Trigger",
+    "description": "Starts the workflow when Cisco Webex events occur.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.cloudflare",
+    "displayName": "Cloudflare",
+    "description": "Consume Cloudflare API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clearbit",
+    "displayName": "Clearbit",
+    "description": "Consume Clearbit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clickUp",
+    "displayName": "ClickUp",
+    "description": "Consume ClickUp API (Beta)",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clickUpTrigger",
+    "displayName": "ClickUp Trigger",
+    "description": "Handle ClickUp events via webhooks (Beta)",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.clockify",
+    "displayName": "Clockify",
+    "description": "Consume Clockify REST API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clockifyTrigger",
+    "displayName": "Clockify Trigger",
+    "description": "Listens to Clockify events",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.cockpit",
+    "displayName": "Cockpit",
+    "description": "Consume Cockpit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.coda",
+    "displayName": "Coda",
+    "description": "Consume Coda API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.code",
+    "displayName": "Code",
+    "description": "Run custom JavaScript or Python code",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.coinGecko",
+    "displayName": "CoinGecko",
+    "description": "Consume CoinGecko API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.compareDatasets",
+    "displayName": "Compare Datasets",
+    "description": "Compare two inputs for changes",
+    "typeVersion": 2.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.compression",
+    "displayName": "Compression",
+    "description": "Compress and decompress files",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.contentful",
+    "displayName": "Contentful",
+    "description": "Consume Contentful API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.convertKit",
+    "displayName": "ConvertKit",
+    "description": "Consume ConvertKit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.convertKitTrigger",
+    "displayName": "ConvertKit Trigger",
+    "description": "Handle ConvertKit events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.copper",
+    "displayName": "Copper",
+    "description": "Consume the Copper API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.copperTrigger",
+    "displayName": "Copper Trigger",
+    "description": "Handle Copper events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.cortex",
+    "displayName": "Cortex",
+    "description": "Apply the Cortex analyzer/responder on the given entity",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.crateDb",
+    "displayName": "CrateDB",
+    "description": "Add and update data in CrateDB",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.cron",
+    "displayName": "Cron",
+    "description": "Triggers the workflow at a specific time",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.crowdDev",
+    "displayName": "crowd.dev",
+    "description": "crowd.dev is an open-source suite of community and data tools built to unlock community-led growth for your organization.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.crowdDevTrigger",
+    "displayName": "crowd.dev Trigger",
+    "description": "Starts the workflow when crowd.dev events occur.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.crypto",
+    "displayName": "Crypto",
+    "description": "Provide cryptographic utilities",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.customerIo",
+    "displayName": "Customer.io",
+    "description": "Consume Customer.io API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.customerIoTrigger",
+    "displayName": "Customer.io Trigger",
+    "description": "Starts the workflow on a Customer.io update (Beta)",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.dataTable",
+    "displayName": "Data table",
+    "description": "Permanently save data across workflow executions in a table",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dateTime",
+    "displayName": "Date & Time",
+    "description": "Manipulate date and time values",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dateTime",
+    "displayName": "Date & Time",
+    "description": "Allows you to manipulate date and time values",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.debugHelper",
+    "displayName": "DebugHelper",
+    "description": "Causes problems intentionally and generates useful data for debugging",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.deepL",
+    "displayName": "DeepL",
+    "description": "Translate data using DeepL",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.demio",
+    "displayName": "Demio",
+    "description": "Consume the Demio API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dhl",
+    "displayName": "DHL",
+    "description": "Consume DHL API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.discord",
+    "displayName": "Discord",
+    "description": "Sends data to Discord",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.discord",
+    "displayName": "Discord",
+    "description": "Sends data to Discord",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.discourse",
+    "displayName": "Discourse",
+    "description": "Consume Discourse API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.disqus",
+    "displayName": "Disqus",
+    "description": "Access data on Disqus",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.drift",
+    "displayName": "Drift",
+    "description": "Consume Drift API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dropbox",
+    "displayName": "Dropbox",
+    "description": "Access data on Dropbox",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dropcontact",
+    "displayName": "Dropcontact",
+    "description": "Find B2B emails and enrich contacts",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.editImage",
+    "displayName": "Edit Image",
+    "description": "Edits an image like blur, resize or adding border and text",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.egoi",
+    "displayName": "E-goi",
+    "description": "Consume E-goi API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.elasticsearch",
+    "displayName": "Elasticsearch",
+    "description": "Consume the Elasticsearch API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.elasticSecurity",
+    "displayName": "Elastic Security",
+    "description": "Consume the Elastic Security API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emailReadImap",
+    "displayName": "Email Trigger (IMAP)",
+    "description": "Triggers the workflow when a new email is received",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emailReadImap",
+    "displayName": "Email Trigger (IMAP)",
+    "description": "Triggers the workflow when a new email is received",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emailSend",
+    "displayName": "Send Email",
+    "description": "Sends an email using SMTP protocol",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emailSend",
+    "displayName": "Send Email",
+    "description": "Sends an Email",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emelia",
+    "displayName": "Emelia",
+    "description": "Consume the Emelia API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emeliaTrigger",
+    "displayName": "Emelia Trigger",
+    "description": "Handle Emelia campaign activity events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.erpNext",
+    "displayName": "ERPNext",
+    "description": "Consume ERPNext API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.errorTrigger",
+    "displayName": "Error Trigger",
+    "description": "Triggers the workflow when another workflow has an error",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.evaluationTrigger",
+    "displayName": "Evaluation Trigger",
+    "description": "Run a test dataset through your workflow to check performance",
+    "typeVersion": 4.7,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.evaluation",
+    "displayName": "Evaluation",
+    "description": "Runs an evaluation",
+    "typeVersion": 4.8,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.eventbriteTrigger",
+    "displayName": "Eventbrite Trigger",
+    "description": "Handle Eventbrite events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.executeCommand",
+    "displayName": "Execute Command",
+    "description": "Executes a command on the host",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.executeWorkflow",
+    "displayName": "Execute Sub-workflow",
+    "description": "Execute another workflow",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.executeWorkflowTrigger",
+    "displayName": "Execute Workflow Trigger",
+    "description": "Helpers for calling other n8n workflows. Used for designing modular, microservice-like workflows.",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.executionData",
+    "displayName": "Execution Data",
+    "description": "Add execution data for search",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.facebookGraphApi",
+    "displayName": "Facebook Graph API",
+    "description": "Interacts with Facebook using the Graph API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.facebookTrigger",
+    "displayName": "Facebook Trigger",
+    "description": "Starts the workflow when Facebook events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.facebookLeadAdsTrigger",
+    "displayName": "Facebook Lead Ads Trigger",
+    "description": "Handle Facebook Lead Ads events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.figmaTrigger",
+    "displayName": "Figma Trigger (Beta)",
+    "description": "Starts the workflow when Figma events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.filemaker",
+    "displayName": "FileMaker",
+    "description": "Retrieve data from the FileMaker data API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.readWriteFile",
+    "displayName": "Read/Write Files from Disk",
+    "description": "Read or write files from the computer that runs n8n",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.convertToFile",
+    "displayName": "Convert to File",
+    "description": "Convert JSON data to binary data",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.extractFromFile",
+    "displayName": "Extract from File",
+    "description": "Convert binary data to JSON",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.filter",
+    "displayName": "Filter",
+    "description": "Remove items matching a condition",
+    "typeVersion": 2.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.filter",
+    "displayName": "Filter",
+    "description": "Remove items matching a condition",
+    "typeVersion": 2.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.flow",
+    "displayName": "Flow",
+    "description": "Consume Flow API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.flowTrigger",
+    "displayName": "Flow Trigger",
+    "description": "Handle Flow events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.form",
+    "displayName": "n8n Form",
+    "description": "Generate webforms in n8n and pass their responses to the workflow",
+    "typeVersion": 2.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.formTrigger",
+    "displayName": "n8n Form Trigger",
+    "description": "Generate webforms in n8n and pass their responses to the workflow",
+    "typeVersion": 2.3,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.formTrigger",
+    "displayName": "n8n Form Trigger",
+    "description": "Generate webforms in n8n and pass their responses to the workflow",
+    "typeVersion": 2.3,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.formIoTrigger",
+    "displayName": "Form.io Trigger",
+    "description": "Handle form.io events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.formstackTrigger",
+    "displayName": "Formstack Trigger",
+    "description": "Starts the workflow on a Formstack form submission.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.freshdesk",
+    "displayName": "Freshdesk",
+    "description": "Consume Freshdesk API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.freshservice",
+    "displayName": "Freshservice",
+    "description": "Consume the Freshservice API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.freshworksCrm",
+    "displayName": "Freshworks CRM",
+    "description": "Consume the Freshworks CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ftp",
+    "displayName": "FTP",
+    "description": "Transfer files via FTP or SFTP",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.function",
+    "displayName": "Function",
+    "description": "Run custom function code which gets executed once and allows you to add, remove, change and replace items",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.functionItem",
+    "displayName": "Function Item",
+    "description": "Run custom function code which gets executed once per item",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.getResponse",
+    "displayName": "GetResponse",
+    "description": "Consume GetResponse API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.getResponseTrigger",
+    "displayName": "GetResponse Trigger",
+    "description": "Starts the workflow when GetResponse events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.ghost",
+    "displayName": "Ghost",
+    "description": "Consume Ghost API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.git",
+    "displayName": "Git",
+    "description": "Control git.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.github",
+    "displayName": "GitHub",
+    "description": "Consume GitHub API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.githubTrigger",
+    "displayName": "Github Trigger",
+    "description": "Starts the workflow when Github events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.gitlab",
+    "displayName": "GitLab",
+    "description": "Retrieve data from GitLab API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gitlabTrigger",
+    "displayName": "GitLab Trigger",
+    "description": "Starts the workflow when GitLab events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.gong",
+    "displayName": "Gong",
+    "description": "Interact with Gong API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleAds",
+    "displayName": "Google Ads",
+    "description": "Use the Google Ads API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleAnalytics",
+    "displayName": "Google Analytics",
+    "description": "Use the Google Analytics API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleAnalytics",
+    "displayName": "Google Analytics",
+    "description": "Use the Google Analytics API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBigQuery",
+    "displayName": "Google BigQuery",
+    "description": "Consume Google BigQuery API",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBigQuery",
+    "displayName": "Google BigQuery",
+    "description": "Consume Google BigQuery API",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBooks",
+    "displayName": "Google Books",
+    "description": "Read data from Google Books",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCalendar",
+    "displayName": "Google Calendar",
+    "description": "Consume Google Calendar API",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCalendarTrigger",
+    "displayName": "Google Calendar Trigger",
+    "description": "Starts the workflow when Google Calendar events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.googleChat",
+    "displayName": "Google Chat",
+    "description": "Consume Google Chat API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCloudNaturalLanguage",
+    "displayName": "Google Cloud Natural Language",
+    "description": "Consume Google Cloud Natural Language API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCloudStorage",
+    "displayName": "Google Cloud Storage",
+    "description": "Use the Google Cloud Storage API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleContacts",
+    "displayName": "Google Contacts",
+    "description": "Consume Google Contacts API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleDocs",
+    "displayName": "Google Docs",
+    "description": "Consume Google Docs API.",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleDrive",
+    "displayName": "Google Drive",
+    "description": "Access data on Google Drive",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleDrive",
+    "displayName": "Google Drive",
+    "description": "Access data on Google Drive",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleDriveTrigger",
+    "displayName": "Google Drive Trigger",
+    "description": "Starts the workflow when Google Drive events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.googleFirebaseCloudFirestore",
+    "displayName": "Google Cloud Firestore",
+    "description": "Interact with Google Firebase - Cloud Firestore API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleFirebaseRealtimeDatabase",
+    "displayName": "Google Cloud Realtime Database",
+    "description": "Interact with Google Firebase - Realtime Database API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gmail",
+    "displayName": "Gmail",
+    "description": "Consume the Gmail API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gmail",
+    "displayName": "Gmail",
+    "description": "Consume the Gmail API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gmailTrigger",
+    "displayName": "Gmail Trigger",
+    "description": "Fetches emails from Gmail and starts the workflow on specified polling intervals.",
+    "typeVersion": 1.3,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.gSuiteAdmin",
+    "displayName": "Google Workspace Admin",
+    "description": "Consume Google Workspace Admin API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBusinessProfile",
+    "displayName": "Google Business Profile",
+    "description": "Consume Google Business Profile API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBusinessProfileTrigger",
+    "displayName": "Google Business Profile Trigger",
+    "description": "Fetches reviews from Google Business Profile and starts the workflow on specified polling intervals.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.googlePerspective",
+    "displayName": "Google Perspective",
+    "description": "Consume Google Perspective API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleSheets",
+    "displayName": "Google Sheets",
+    "description": "Read, update and write data to Google Sheets",
+    "typeVersion": 4.7,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleSheets",
+    "displayName": "Google Sheets ",
+    "description": "Read, update and write data to Google Sheets",
+    "typeVersion": 4.7,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleSheetsTrigger",
+    "displayName": "Google Sheets Trigger",
+    "description": "Starts the workflow when Google Sheets events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.googleSlides",
+    "displayName": "Google Slides",
+    "description": "Consume the Google Slides API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleTasks",
+    "displayName": "Google Tasks",
+    "description": "Consume Google Tasks API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleTranslate",
+    "displayName": "Google Translate",
+    "description": "Translate data using Google Translate",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.youTube",
+    "displayName": "YouTube",
+    "description": "Consume YouTube API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gotify",
+    "displayName": "Gotify",
+    "description": "Consume Gotify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.goToWebinar",
+    "displayName": "GoToWebinar",
+    "description": "Consume the GoToWebinar API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.grafana",
+    "displayName": "Grafana",
+    "description": "Consume the Grafana API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.graphql",
+    "displayName": "GraphQL",
+    "description": "Makes a GraphQL request and returns the received data",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.grist",
+    "displayName": "Grist",
+    "description": "Consume the Grist API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gumroadTrigger",
+    "displayName": "Gumroad Trigger",
+    "description": "Handle Gumroad events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.hackerNews",
+    "displayName": "Hacker News",
+    "description": "Consume Hacker News API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.haloPSA",
+    "displayName": "HaloPSA",
+    "description": "Consume HaloPSA API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.harvest",
+    "displayName": "Harvest",
+    "description": "Access data on Harvest",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.helpScout",
+    "displayName": "Help Scout",
+    "description": "Consume Help Scout API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.helpScoutTrigger",
+    "displayName": "Help Scout Trigger",
+    "description": "Starts the workflow when Help Scout events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.highLevel",
+    "displayName": "HighLevel",
+    "description": "Consume HighLevel API v2",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.highLevel",
+    "displayName": "HighLevel",
+    "description": "Consume HighLevel API v1",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.homeAssistant",
+    "displayName": "Home Assistant",
+    "description": "Consume Home Assistant API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.htmlExtract",
+    "displayName": "HTML Extract",
+    "description": "Extracts data from HTML",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.html",
+    "displayName": "HTML",
+    "description": "Work with HTML",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.httpRequest",
+    "displayName": "HTTP Request",
+    "description": "Makes an HTTP request and returns the response data",
+    "typeVersion": 4.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.httpRequest",
+    "displayName": "HTTP Request",
+    "description": "Makes an HTTP request and returns the response data",
+    "typeVersion": 4.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.httpRequest",
+    "displayName": "HTTP Request",
+    "description": "Makes an HTTP request and returns the response data",
+    "typeVersion": 4.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hubspot",
+    "displayName": "HubSpot",
+    "description": "Consume HubSpot API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hubspot",
+    "displayName": "HubSpot",
+    "description": "Consume HubSpot API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hubspotTrigger",
+    "displayName": "HubSpot Trigger",
+    "description": "Starts the workflow when HubSpot events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.humanticAi",
+    "displayName": "Humantic AI",
+    "description": "Consume Humantic AI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hunter",
+    "displayName": "Hunter",
+    "description": "Consume Hunter API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.iCal",
+    "displayName": "iCalendar",
+    "description": "Create iCalendar file",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.if",
+    "displayName": "If",
+    "description": "Route items to different branches (true/false)",
+    "typeVersion": 2.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.if",
+    "displayName": "If",
+    "description": "Route items to different branches (true/false)",
+    "typeVersion": 2.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.intercom",
+    "displayName": "Intercom",
+    "description": "Consume Intercom API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.interval",
+    "displayName": "Interval",
+    "description": "Triggers the workflow in a given interval",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.invoiceNinja",
+    "displayName": "Invoice Ninja",
+    "description": "Consume Invoice Ninja API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.invoiceNinjaTrigger",
+    "displayName": "Invoice Ninja Trigger",
+    "description": "Starts the workflow when Invoice Ninja events occur",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.itemLists",
+    "displayName": "Item Lists",
+    "description": "Helper for working with lists of items and transforming arrays",
+    "typeVersion": 3.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.itemLists",
+    "displayName": "Item Lists",
+    "description": "Helper for working with lists of items and transforming arrays",
+    "typeVersion": 3.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.itemLists",
+    "displayName": "Item Lists",
+    "description": "Helper for working with lists of items and transforming arrays",
+    "typeVersion": 3.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.iterable",
+    "displayName": "Iterable",
+    "description": "Consume Iterable API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jenkins",
+    "displayName": "Jenkins",
+    "description": "Consume Jenkins API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jinaAi",
+    "displayName": "Jina AI",
+    "description": "Interact with Jina AI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jira",
+    "displayName": "Jira Software",
+    "description": "Consume Jira Software API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jiraTrigger",
+    "displayName": "Jira Trigger",
+    "description": "Starts the workflow when Jira events occur",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.jotFormTrigger",
+    "displayName": "Jotform Trigger",
+    "description": "Handle Jotform events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.jwt",
+    "displayName": "JWT",
+    "description": "JWT",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.kafka",
+    "displayName": "Kafka",
+    "description": "Sends messages to a Kafka topic",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.kafkaTrigger",
+    "displayName": "Kafka Trigger",
+    "description": "Consume messages from a Kafka topic",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.keap",
+    "displayName": "Keap",
+    "description": "Consume Keap API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.keapTrigger",
+    "displayName": "Keap Trigger",
+    "description": "Starts the workflow when Infusionsoft events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.kitemaker",
+    "displayName": "Kitemaker",
+    "description": "Consume the Kitemaker GraphQL API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.koBoToolbox",
+    "displayName": "KoBoToolbox",
+    "description": "Work with KoBoToolbox forms and submissions",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.koBoToolboxTrigger",
+    "displayName": "KoBoToolbox Trigger",
+    "description": "Process KoBoToolbox submissions",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.ldap",
+    "displayName": "Ldap",
+    "description": "Interact with LDAP servers",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.lemlist",
+    "displayName": "Lemlist",
+    "description": "Consume the Lemlist API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.lemlist",
+    "displayName": "Lemlist",
+    "description": "Consume the Lemlist API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.lemlistTrigger",
+    "displayName": "Lemlist Trigger",
+    "description": "Handle Lemlist events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.line",
+    "displayName": "Line",
+    "description": "Consume Line API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.linear",
+    "displayName": "Linear",
+    "description": "Consume Linear API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.linearTrigger",
+    "displayName": "Linear Trigger",
+    "description": "Starts the workflow when Linear events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.lingvaNex",
+    "displayName": "LingvaNex",
+    "description": "Consume LingvaNex API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.linkedIn",
+    "displayName": "LinkedIn",
+    "description": "Consume LinkedIn API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.localFileTrigger",
+    "displayName": "Local File Trigger",
+    "description": "Triggers a workflow on file system changes",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.loneScaleTrigger",
+    "displayName": "LoneScale Trigger",
+    "description": "Trigger LoneScale Workflow",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.loneScale",
+    "displayName": "LoneScale",
+    "description": "Create List, add / delete items",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.magento2",
+    "displayName": "Magento 2",
+    "description": "Consume Magento API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailcheck",
+    "displayName": "Mailcheck",
+    "description": "Consume Mailcheck API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailchimp",
+    "displayName": "Mailchimp",
+    "description": "Consume Mailchimp API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailchimpTrigger",
+    "displayName": "Mailchimp Trigger",
+    "description": "Handle Mailchimp events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.mailerLite",
+    "displayName": "MailerLite",
+    "description": "Consume Mailer Lite API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailerLite",
+    "displayName": "MailerLite",
+    "description": "Consume Mailer Lite API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailerLiteTrigger",
+    "displayName": "MailerLite Trigger",
+    "description": "Starts the workflow when MailerLite events occur",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.mailerLiteTrigger",
+    "displayName": "MailerLite Trigger",
+    "description": "Starts the workflow when MailerLite events occur",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.mailgun",
+    "displayName": "Mailgun",
+    "description": "Sends an email via Mailgun",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailjet",
+    "displayName": "Mailjet",
+    "description": "Consume Mailjet API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailjetTrigger",
+    "displayName": "Mailjet Trigger",
+    "description": "Handle Mailjet events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.mandrill",
+    "displayName": "Mandrill",
+    "description": "Consume Mandrill API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.manualTrigger",
+    "displayName": "Manual Trigger",
+    "description": "Runs the flow on clicking a button in n8n",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.markdown",
+    "displayName": "Markdown",
+    "description": "Convert data between Markdown and HTML",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.marketstack",
+    "displayName": "Marketstack",
+    "description": "Consume Marketstack API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.matrix",
+    "displayName": "Matrix",
+    "description": "Consume Matrix API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mattermost",
+    "displayName": "Mattermost",
+    "description": "Sends data to Mattermost",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mautic",
+    "displayName": "Mautic",
+    "description": "Consume Mautic API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mauticTrigger",
+    "displayName": "Mautic Trigger",
+    "description": "Handle Mautic events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.medium",
+    "displayName": "Medium",
+    "description": "Consume Medium API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.merge",
+    "displayName": "Merge",
+    "description": "Merges data of multiple streams once data from both is available",
+    "typeVersion": 3.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.merge",
+    "displayName": "Merge",
+    "description": "Merges data of multiple streams once data from both is available",
+    "typeVersion": 3.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.merge",
+    "displayName": "Merge",
+    "description": "Merges data of multiple streams once data from both is available",
+    "typeVersion": 3.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.messageBird",
+    "displayName": "MessageBird",
+    "description": "Sends SMS via MessageBird",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.metabase",
+    "displayName": "Metabase",
+    "description": "Use the Metabase API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.azureCosmosDb",
+    "displayName": "Azure Cosmos DB",
+    "description": "Interact with Azure Cosmos DB API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftDynamicsCrm",
+    "displayName": "Microsoft Dynamics CRM",
+    "description": "Consume Microsoft Dynamics CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftEntra",
+    "displayName": "Microsoft Entra ID",
+    "description": "Interact with Microsoft Entra ID API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftExcel",
+    "displayName": "Microsoft Excel 365",
+    "description": "Consume Microsoft Excel API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftExcel",
+    "displayName": "Microsoft Excel",
+    "description": "Consume Microsoft Excel API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftGraphSecurity",
+    "displayName": "Microsoft Graph Security",
+    "description": "Consume the Microsoft Graph Security API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOneDrive",
+    "displayName": "Microsoft OneDrive",
+    "description": "Consume Microsoft OneDrive API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOneDriveTrigger",
+    "displayName": "Microsoft OneDrive Trigger",
+    "description": "Trigger for Microsoft OneDrive API.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOutlook",
+    "displayName": "Microsoft Outlook",
+    "description": "Consume Microsoft Outlook API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOutlook",
+    "displayName": "Microsoft Outlook",
+    "description": "Consume Microsoft Outlook API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOutlookTrigger",
+    "displayName": "Microsoft Outlook Trigger",
+    "description": "Fetches emails from Microsoft Outlook and starts the workflow on specified polling intervals.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.microsoftSharePoint",
+    "displayName": "Microsoft SharePoint",
+    "description": "Interact with Microsoft SharePoint API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftSql",
+    "displayName": "Microsoft SQL",
+    "description": "Get, add and update data in Microsoft SQL",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.azureStorage",
+    "displayName": "Azure Storage",
+    "description": "Interact with Azure Storage API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftTeams",
+    "displayName": "Microsoft Teams",
+    "description": "Consume Microsoft Teams API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftTeams",
+    "displayName": "Microsoft Teams",
+    "description": "Consume Microsoft Teams API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftTeamsTrigger",
+    "displayName": "Microsoft Teams Trigger",
+    "description": "Triggers workflows in n8n based on events from Microsoft Teams, such as new messages or team updates, using specified configurations.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.microsoftToDo",
+    "displayName": "Microsoft To Do",
+    "description": "Consume Microsoft To Do API.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mindee",
+    "displayName": "Mindee",
+    "description": "Consume Mindee API",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.misp",
+    "displayName": "MISP",
+    "description": "Consume the MISP API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mistralAi",
+    "displayName": "Mistral AI",
+    "description": "Consume Mistral AI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mocean",
+    "displayName": "Mocean",
+    "description": "Send SMS and voice messages via Mocean",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mondayCom",
+    "displayName": "Monday.com",
+    "description": "Consume Monday.com API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mongoDb",
+    "displayName": "MongoDB",
+    "description": "Find, insert and update documents in MongoDB",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.monicaCrm",
+    "displayName": "Monica CRM",
+    "description": "Consume the Monica CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.moveBinaryData",
+    "displayName": "Convert to/from binary data",
+    "description": "Move data between binary and JSON properties",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mqtt",
+    "displayName": "MQTT",
+    "description": "Push messages to MQTT",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mqttTrigger",
+    "displayName": "MQTT Trigger",
+    "description": "Listens to MQTT events",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.msg91",
+    "displayName": "MSG91",
+    "description": "Sends transactional SMS via MSG91",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mySql",
+    "displayName": "MySQL",
+    "description": "Get, add and update data in MySQL",
+    "typeVersion": 2.5,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mySql",
+    "displayName": "MySQL",
+    "description": "Get, add and update data in MySQL",
+    "typeVersion": 2.5,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.n8n",
+    "displayName": "n8n",
+    "description": "Handle events and perform actions on your n8n instance",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+    "displayName": "Customer Datastore (n8n training)",
+    "description": "Dummy node used for n8n training",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.n8nTrainingCustomerMessenger",
+    "displayName": "Customer Messenger (n8n training)",
+    "description": "Dummy node used for n8n training",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.n8nTrigger",
+    "displayName": "n8n Trigger",
+    "description": "Handle events and perform actions on your n8n instance",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.nasa",
+    "displayName": "NASA",
+    "description": "Retrieve data from the NASA API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.netlify",
+    "displayName": "Netlify",
+    "description": "Consume Netlify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.netlifyTrigger",
+    "displayName": "Netlify Trigger",
+    "description": "Handle netlify events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.nextCloud",
+    "displayName": "Nextcloud",
+    "description": "Access data on Nextcloud",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.nocoDb",
+    "displayName": "NocoDB",
+    "description": "Read, update, write and delete data from NocoDB",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendInBlue",
+    "displayName": "Brevo",
+    "description": "Consume Brevo API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendInBlueTrigger",
+    "displayName": "Brevo Trigger",
+    "description": "Starts the workflow when Brevo events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.stickyNote",
+    "displayName": "Sticky Note",
+    "description": "Make your workflow easier to understand",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.noOp",
+    "displayName": "No Operation, do nothing",
+    "description": "No Operation",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.onfleet",
+    "displayName": "Onfleet",
+    "description": "Consume Onfleet API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.onfleetTrigger",
+    "displayName": "Onfleet Trigger",
+    "description": "Starts the workflow when Onfleet events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.citrixAdc",
+    "displayName": "Netscaler ADC",
+    "description": "Consume Netscaler ADC API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.notion",
+    "displayName": "Notion",
+    "description": "Consume Notion API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.notion",
+    "displayName": "Notion",
+    "description": "Consume Notion API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.notionTrigger",
+    "displayName": "Notion Trigger",
+    "description": "Starts the workflow when Notion events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.npm",
+    "displayName": "Npm",
+    "description": "Consume NPM registry API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.odoo",
+    "displayName": "Odoo",
+    "description": "Consume Odoo API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.okta",
+    "displayName": "Okta",
+    "description": "Use the Okta API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.oneSimpleApi",
+    "displayName": "One Simple API",
+    "description": "A toolbox of no-code utilities",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.openAi",
+    "displayName": "OpenAI",
+    "description": "Consume Open AI",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.openThesaurus",
+    "displayName": "OpenThesaurus",
+    "description": "Get synonmns for German words using the OpenThesaurus API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.openWeatherMap",
+    "displayName": "OpenWeatherMap",
+    "description": "Gets current and future weather information",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.oracleDatabase",
+    "displayName": "Oracle Database",
+    "description": "Get, add and update data in Oracle database",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.orbit",
+    "displayName": "Orbit",
+    "description": "Consume Orbit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.oura",
+    "displayName": "Oura",
+    "description": "Consume Oura API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.paddle",
+    "displayName": "Paddle",
+    "description": "Consume Paddle API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pagerDuty",
+    "displayName": "PagerDuty",
+    "description": "Consume PagerDuty API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.payPal",
+    "displayName": "PayPal",
+    "description": "Consume PayPal API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.payPalTrigger",
+    "displayName": "PayPal Trigger",
+    "description": "Handle PayPal events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.peekalink",
+    "displayName": "Peekalink",
+    "description": "Consume the Peekalink API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.perplexity",
+    "displayName": "Perplexity",
+    "description": "Interact with the Perplexity API to generate AI responses with citations",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.phantombuster",
+    "displayName": "Phantombuster",
+    "description": "Consume Phantombuster API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.philipsHue",
+    "displayName": "Philips Hue",
+    "description": "Consume Philips Hue API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pipedrive",
+    "displayName": "Pipedrive",
+    "description": "Create and edit data in Pipedrive",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pipedriveTrigger",
+    "displayName": "Pipedrive Trigger",
+    "description": "Starts the workflow when Pipedrive events occur",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.plivo",
+    "displayName": "Plivo",
+    "description": "Send SMS/MMS messages or make phone calls",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postBin",
+    "displayName": "PostBin",
+    "description": "Consume PostBin API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postgres",
+    "displayName": "Postgres",
+    "description": "Get, add and update data in Postgres",
+    "typeVersion": 2.6,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postgres",
+    "displayName": "Postgres",
+    "description": "Get, add and update data in Postgres",
+    "typeVersion": 2.6,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postgresTrigger",
+    "displayName": "Postgres Trigger",
+    "description": "Listens to Postgres messages",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.postHog",
+    "displayName": "PostHog",
+    "description": "Consume PostHog API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postmarkTrigger",
+    "displayName": "Postmark Trigger",
+    "description": "Starts the workflow when Postmark events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.profitWell",
+    "displayName": "ProfitWell",
+    "description": "Consume ProfitWell API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pushbullet",
+    "displayName": "Pushbullet",
+    "description": "Consume Pushbullet API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pushcut",
+    "displayName": "Pushcut",
+    "description": "Consume Pushcut API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pushcutTrigger",
+    "displayName": "Pushcut Trigger",
+    "description": "Starts the workflow when Pushcut events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.pushover",
+    "displayName": "Pushover",
+    "description": "Consume Pushover API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.questDb",
+    "displayName": "QuestDB",
+    "description": "Get, add and update data in QuestDB",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.quickbase",
+    "displayName": "Quick Base",
+    "description": "Integrate with the Quick Base RESTful API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.quickbooks",
+    "displayName": "QuickBooks Online",
+    "description": "Consume the QuickBooks Online API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.quickChart",
+    "displayName": "QuickChart",
+    "description": "Create a chart via QuickChart",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rabbitmq",
+    "displayName": "RabbitMQ",
+    "description": "Sends messages to a RabbitMQ topic",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rabbitmqTrigger",
+    "displayName": "RabbitMQ Trigger",
+    "description": "Listens to RabbitMQ messages",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.raindrop",
+    "displayName": "Raindrop",
+    "description": "Consume the Raindrop API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.readBinaryFile",
+    "displayName": "Read Binary File",
+    "description": "Reads a binary file from disk",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.readBinaryFiles",
+    "displayName": "Read Binary Files",
+    "description": "Reads binary files from disk",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.readPDF",
+    "displayName": "Read PDF",
+    "description": "Reads a PDF and extracts its content",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.reddit",
+    "displayName": "Reddit",
+    "description": "Consume the Reddit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.redis",
+    "displayName": "Redis",
+    "description": "Get, send and update data in Redis",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.redisTrigger",
+    "displayName": "Redis Trigger",
+    "description": "Subscribe to redis channel",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.renameKeys",
+    "displayName": "Rename Keys",
+    "description": "Update item field names",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.respondToWebhook",
+    "displayName": "Respond to Webhook",
+    "description": "Returns data for Webhook",
+    "typeVersion": 1.5,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rocketchat",
+    "displayName": "RocketChat",
+    "description": "Consume RocketChat API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rssFeedRead",
+    "displayName": "RSS Read",
+    "description": "Reads data from an RSS Feed",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rssFeedReadTrigger",
+    "displayName": "RSS Feed Trigger",
+    "description": "Starts a workflow when an RSS feed is updated",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.rundeck",
+    "displayName": "Rundeck",
+    "description": "Manage Rundeck API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.s3",
+    "displayName": "S3",
+    "description": "Sends data to any S3-compatible service",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.salesforce",
+    "displayName": "Salesforce",
+    "description": "Consume Salesforce API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.salesforceTrigger",
+    "displayName": "Salesforce Trigger",
+    "description": "Fetches data from Salesforce and starts the workflow on specified polling intervals.",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.salesmate",
+    "displayName": "Salesmate",
+    "description": "Consume Salesmate API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.scheduleTrigger",
+    "displayName": "Schedule Trigger",
+    "description": "Triggers the workflow on a given schedule",
+    "typeVersion": 1.3,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.seaTable",
+    "displayName": "SeaTable",
+    "description": "Consume the SeaTable API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.seaTable",
+    "displayName": "SeaTable",
+    "description": "Consume the SeaTable API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.seaTableTrigger",
+    "displayName": "SeaTable Trigger",
+    "description": "Starts the workflow when SeaTable events occur",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.seaTableTrigger",
+    "displayName": "SeaTable Trigger",
+    "description": "Starts the workflow when SeaTable events occur",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.securityScorecard",
+    "displayName": "SecurityScorecard",
+    "description": "Consume SecurityScorecard API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.segment",
+    "displayName": "Segment",
+    "description": "Consume Segment API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendGrid",
+    "displayName": "SendGrid",
+    "description": "Consume SendGrid API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendy",
+    "displayName": "Sendy",
+    "description": "Consume Sendy API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sentryIo",
+    "displayName": "Sentry.io",
+    "description": "Consume Sentry.io API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.serviceNow",
+    "displayName": "ServiceNow",
+    "description": "Consume ServiceNow API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.set",
+    "displayName": "Edit Fields (Set)",
+    "description": "Modify, add, or remove item fields",
+    "typeVersion": 3.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.set",
+    "displayName": "Set",
+    "description": "Sets values on items and optionally remove other values",
+    "typeVersion": 3.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.shopify",
+    "displayName": "Shopify",
+    "description": "Consume Shopify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.shopifyTrigger",
+    "displayName": "Shopify Trigger",
+    "description": "Handle Shopify events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.signl4",
+    "displayName": "SIGNL4",
+    "description": "Consume SIGNL4 API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.simulate",
+    "displayName": "Simulate",
+    "description": "Simulate a node",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.simulateTrigger",
+    "displayName": "Simulate Trigger",
+    "description": "Simulate a trigger node",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.slack",
+    "displayName": "Slack",
+    "description": "Consume Slack API",
+    "typeVersion": 2.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.slack",
+    "displayName": "Slack",
+    "description": "Consume Slack API",
+    "typeVersion": 2.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.slackTrigger",
+    "displayName": "Slack Trigger",
+    "description": "Handle Slack events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.sms77",
+    "displayName": "seven",
+    "description": "Send SMS and make text-to-speech calls",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.snowflake",
+    "displayName": "Snowflake",
+    "description": "Get, add and update data in Snowflake",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splitInBatches",
+    "displayName": "Loop Over Items (Split in Batches)",
+    "description": "Split data into batches and iterate over each batch",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splitInBatches",
+    "displayName": "Split In Batches",
+    "description": "Split data into batches and iterate over each batch",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splitInBatches",
+    "displayName": "Split In Batches",
+    "description": "Split data into batches and iterate over each batch",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splunk",
+    "displayName": "Splunk",
+    "description": "Consume the Splunk Enterprise API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splunk",
+    "displayName": "Splunk",
+    "description": "Consume the Splunk Enterprise API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.spontit",
+    "displayName": "Spontit",
+    "description": "Consume Spontit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.spotify",
+    "displayName": "Spotify",
+    "description": "Access public song data via the Spotify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.spreadsheetFile",
+    "displayName": "Spreadsheet File",
+    "description": "Reads and writes data from a spreadsheet file like CSV, XLS, ODS, etc",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.spreadsheetFile",
+    "displayName": "Spreadsheet File",
+    "description": "Reads and writes data from a spreadsheet file like CSV, XLS, ODS, etc",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sseTrigger",
+    "displayName": "SSE Trigger",
+    "description": "Triggers the workflow when Server-Sent Events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.ssh",
+    "displayName": "SSH",
+    "description": "Execute commands via SSH",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stackby",
+    "displayName": "Stackby",
+    "description": "Read, write, and delete data in Stackby",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.start",
+    "displayName": "Start",
+    "description": "Starts the workflow execution from this node",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stopAndError",
+    "displayName": "Stop and Error",
+    "description": "Throw an error in the workflow",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.storyblok",
+    "displayName": "Storyblok",
+    "description": "Consume Storyblok API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.strapi",
+    "displayName": "Strapi",
+    "description": "Consume Strapi API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.strava",
+    "displayName": "Strava",
+    "description": "Consume Strava API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stravaTrigger",
+    "displayName": "Strava Trigger",
+    "description": "Starts the workflow when Strava events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.stripe",
+    "displayName": "Stripe",
+    "description": "Consume the Stripe API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stripeTrigger",
+    "displayName": "Stripe Trigger",
+    "description": "Handle Stripe events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.supabase",
+    "displayName": "Supabase",
+    "description": "Add, get, delete and update data in a table",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.surveyMonkeyTrigger",
+    "displayName": "SurveyMonkey Trigger",
+    "description": "Starts the workflow when Survey Monkey events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.switch",
+    "displayName": "Switch",
+    "description": "Route items depending on defined expression or rules",
+    "typeVersion": 3.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.switch",
+    "displayName": "Switch",
+    "description": "Route items depending on defined expression or rules",
+    "typeVersion": 3.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.switch",
+    "displayName": "Switch",
+    "description": "Route items depending on defined expression or rules",
+    "typeVersion": 3.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.syncroMsp",
+    "displayName": "SyncroMSP",
+    "description": "Gets data from SyncroMSP",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.taiga",
+    "displayName": "Taiga",
+    "description": "Consume Taiga API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.taigaTrigger",
+    "displayName": "Taiga Trigger",
+    "description": "Handle Taiga events via webhook",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.tapfiliate",
+    "displayName": "Tapfiliate",
+    "description": "Consume Tapfiliate API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.telegram",
+    "displayName": "Telegram",
+    "description": "Sends data to Telegram",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.telegramTrigger",
+    "displayName": "Telegram Trigger",
+    "description": "Starts the workflow on a Telegram update",
+    "typeVersion": 1.2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.theHiveProject",
+    "displayName": "TheHive 5",
+    "description": "Consume TheHive 5 API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.theHiveProjectTrigger",
+    "displayName": "TheHive 5 Trigger",
+    "description": "Starts the workflow when TheHive events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.theHive",
+    "displayName": "TheHive",
+    "description": "Consume TheHive API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.theHiveTrigger",
+    "displayName": "TheHive Trigger",
+    "description": "Starts the workflow when TheHive events occur",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.timescaleDb",
+    "displayName": "TimescaleDB",
+    "description": "Add and update data in TimescaleDB",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.todoist",
+    "displayName": "Todoist",
+    "description": "Consume Todoist API",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.todoist",
+    "displayName": "Todoist",
+    "description": "Consume Todoist API",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.togglTrigger",
+    "displayName": "Toggl Trigger",
+    "description": "Starts the workflow when Toggl events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.totp",
+    "displayName": "TOTP",
+    "description": "Generate a time-based one-time password",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.travisCi",
+    "displayName": "TravisCI",
+    "description": "Consume TravisCI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.trello",
+    "displayName": "Trello",
+    "description": "Create, change and delete boards and cards",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.trelloTrigger",
+    "displayName": "Trello Trigger",
+    "description": "Starts the workflow when Trello events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.twake",
+    "displayName": "Twake",
+    "description": "Consume Twake API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twilio",
+    "displayName": "Twilio",
+    "description": "Send SMS and WhatsApp messages or make phone calls",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twilioTrigger",
+    "displayName": "Twilio Trigger",
+    "description": "Starts the workflow on a Twilio update",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.twist",
+    "displayName": "Twist",
+    "description": "Consume Twist API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twitter",
+    "displayName": "X (Formerly Twitter)",
+    "description": "Post, like, and search tweets, send messages, search users, and add users to lists",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twitter",
+    "displayName": "X (Formerly Twitter)",
+    "description": "Consume Twitter API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.typeformTrigger",
+    "displayName": "Typeform Trigger",
+    "description": "Starts the workflow on a Typeform form submission",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.unleashedSoftware",
+    "displayName": "Unleashed Software",
+    "description": "Consume Unleashed Software API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.uplead",
+    "displayName": "Uplead",
+    "description": "Consume Uplead API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.uproc",
+    "displayName": "uProc",
+    "description": "Consume uProc API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.uptimeRobot",
+    "displayName": "UptimeRobot",
+    "description": "Consume UptimeRobot API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.urlScanIo",
+    "displayName": "urlscan.io",
+    "description": "Provides various utilities for monitoring websites like health checks or screenshots",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.vero",
+    "displayName": "Vero",
+    "description": "Consume Vero API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.venafiTlsProtectCloud",
+    "displayName": "Venafi TLS Protect Cloud",
+    "description": "Consume Venafi TLS Protect Cloud API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.venafiTlsProtectCloudTrigger",
+    "displayName": "Venafi TLS Protect Cloud Trigger",
+    "description": "Starts the workflow when Venafi events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.venafiTlsProtectDatacenter",
+    "displayName": "Venafi TLS Protect Datacenter",
+    "description": "Consume Venafi TLS Protect Datacenter",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.vonage",
+    "displayName": "Vonage",
+    "description": "Consume Vonage API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wait",
+    "displayName": "Wait",
+    "description": "Wait before continue with execution",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.webflow",
+    "displayName": "Webflow",
+    "description": "Consume the Webflow API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.webflow",
+    "displayName": "Webflow",
+    "description": "Consume the Webflow API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.webflowTrigger",
+    "displayName": "Webflow Trigger",
+    "description": "Handle Webflow events via webhooks",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.webflowTrigger",
+    "displayName": "Webflow Trigger",
+    "description": "Handle Webflow events via webhooks",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.webhook",
+    "displayName": "Webhook",
+    "description": "Starts the workflow when a webhook is called",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wekan",
+    "displayName": "Wekan",
+    "description": "Consume Wekan API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.whatsAppTrigger",
+    "displayName": "WhatsApp Trigger",
+    "description": "Handle WhatsApp events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.whatsApp",
+    "displayName": "WhatsApp Business Cloud",
+    "description": "Access WhatsApp API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wise",
+    "displayName": "Wise",
+    "description": "Consume the Wise API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wiseTrigger",
+    "displayName": "Wise Trigger",
+    "description": "Handle Wise events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.wooCommerce",
+    "displayName": "WooCommerce",
+    "description": "Consume WooCommerce API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wooCommerceTrigger",
+    "displayName": "WooCommerce Trigger",
+    "description": "Handle WooCommerce events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.wordpress",
+    "displayName": "Wordpress",
+    "description": "Consume Wordpress API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.workableTrigger",
+    "displayName": "Workable Trigger",
+    "description": "Starts the workflow when Workable events occur",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.workflowTrigger",
+    "displayName": "Workflow Trigger",
+    "description": "Triggers based on various lifecycle events, like when a workflow is activated",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.writeBinaryFile",
+    "displayName": "Write Binary File",
+    "description": "Writes a binary file to disk",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wufooTrigger",
+    "displayName": "Wufoo Trigger",
+    "description": "Handle Wufoo events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.xero",
+    "displayName": "Xero",
+    "description": "Consume Xero API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.xml",
+    "displayName": "XML",
+    "description": "Convert data from and to XML",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.yourls",
+    "displayName": "Yourls",
+    "description": "Consume Yourls API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zammad",
+    "displayName": "Zammad",
+    "description": "Consume the Zammad API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zendesk",
+    "displayName": "Zendesk",
+    "description": "Consume Zendesk API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zendeskTrigger",
+    "displayName": "Zendesk Trigger",
+    "description": "Handle Zendesk events via webhooks",
+    "typeVersion": 1,
+    "is_trigger": true
+  },
+  {
+    "name": "n8n-nodes-base.zohoCrm",
+    "displayName": "Zoho CRM",
+    "description": "Consume Zoho CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zoom",
+    "displayName": "Zoom",
+    "description": "Consume Zoom API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zulip",
+    "displayName": "Zulip",
+    "description": "Consume Zulip API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.aggregate",
+    "displayName": "Aggregate",
+    "description": "Combine a field from many items into a list in a single item",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.limit",
+    "displayName": "Limit",
+    "description": "Restrict the number of items",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.removeDuplicates",
+    "displayName": "Remove Duplicates",
+    "description": "Delete items with matching field values",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.removeDuplicates",
+    "displayName": "Remove Duplicates",
+    "description": "Delete items with matching field values",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splitOut",
+    "displayName": "Split Out",
+    "description": "Turn a list inside item(s) into separate items",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sort",
+    "displayName": "Sort",
+    "description": "Change items order",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.summarize",
+    "displayName": "Summarize",
+    "description": "Sum, count, max, etc. across items",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.anthropic",
+    "displayName": "Anthropic",
+    "description": "Interact with Anthropic AI models",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.googleGemini",
+    "displayName": "Google Gemini",
+    "description": "Interact with Google Gemini AI models",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.ollama",
+    "displayName": "Ollama",
+    "description": "Interact with Ollama AI models",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.openAi",
+    "displayName": "OpenAI",
+    "description": "Message an assistant or GPT, analyze images, generate audio, etc.",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.openAi",
+    "displayName": "OpenAI",
+    "description": "Message an assistant or GPT, analyze images, generate audio, etc.",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.agent",
+    "displayName": "AI Agent",
+    "description": "Generates an action plan and executes it. Can use external tools.",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.agent",
+    "displayName": "AI Agent",
+    "description": "Generates an action plan and executes it. Can use external tools.",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.agent",
+    "displayName": "AI Agent",
+    "description": "Generates an action plan and executes it. Can use external tools.",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.agentTool",
+    "displayName": "AI Agent Tool",
+    "description": "Generates an action plan and executes it. Can use external tools.",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.openAiAssistant",
+    "displayName": "OpenAI Assistant",
+    "description": "Utilizes Assistant API from Open AI.",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chainSummarization",
+    "displayName": "Summarization Chain",
+    "description": "Transforms text into a concise summary",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chainSummarization",
+    "displayName": "Summarization Chain",
+    "description": "Transforms text into a concise summary",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chainLlm",
+    "displayName": "Basic LLM Chain",
+    "description": "A simple chain to prompt a large language model",
+    "typeVersion": 1.7,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+    "displayName": "Question and Answer Chain",
+    "description": "Answer questions about retrieved documents",
+    "typeVersion": 1.6,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+    "displayName": "Sentiment Analysis",
+    "description": "Analyze the sentiment of your text",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.informationExtractor",
+    "displayName": "Information Extractor",
+    "description": "Extract information from text in a structured format",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.textClassifier",
+    "displayName": "Text Classifier",
+    "description": "Classify your text into distinct categories",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.code",
+    "displayName": "LangChain Code",
+    "description": "LangChain Code Node",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+    "displayName": "Default Data Loader",
+    "description": "Load data from previous step in the workflow",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.documentBinaryInputLoader",
+    "displayName": "Binary Input Loader",
+    "description": "Use binary data from a previous step in the workflow",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.documentGithubLoader",
+    "displayName": "GitHub Document Loader",
+    "description": "Use GitHub data as input to this chain",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.documentJsonInputLoader",
+    "displayName": "JSON Input Loader",
+    "description": "Use JSON data from a previous step in the workflow",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+    "displayName": "Embeddings Cohere",
+    "description": "Use Cohere Embeddings",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsAwsBedrock",
+    "displayName": "Embeddings AWS Bedrock",
+    "description": "Use Embeddings AWS Bedrock",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsAzureOpenAi",
+    "displayName": "Embeddings Azure OpenAI",
+    "description": "Use Embeddings Azure OpenAI",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+    "displayName": "Embeddings Google Gemini",
+    "description": "Use Google Gemini Embeddings",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsGoogleVertex",
+    "displayName": "Embeddings Google Vertex",
+    "description": "Use Google Vertex Embeddings",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+    "displayName": "Embeddings Hugging Face Inference",
+    "description": "Use HuggingFace Inference Embeddings",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+    "displayName": "Embeddings Mistral Cloud",
+    "description": "Use Embeddings Mistral Cloud",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+    "displayName": "Embeddings OpenAI",
+    "description": "Use Embeddings OpenAI",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsLemonade",
+    "displayName": "Embeddings Lemonade",
+    "description": "Use Lemonade Embeddings",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.embeddingsOllama",
+    "displayName": "Embeddings Ollama",
+    "description": "Use Ollama Embeddings",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+    "displayName": "Anthropic Chat Model",
+    "description": "Language Model Anthropic",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+    "displayName": "Azure OpenAI Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatAwsBedrock",
+    "displayName": "AWS Bedrock Chat Model",
+    "description": "Language Model AWS Bedrock",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatCohere",
+    "displayName": "Cohere Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+    "displayName": "DeepSeek Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+    "displayName": "Google Gemini Chat Model",
+    "description": "Chat Model Google Gemini",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatGoogleVertex",
+    "displayName": "Google Vertex Chat Model",
+    "description": "Chat Model Google Vertex",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatGroq",
+    "displayName": "Groq Chat Model",
+    "description": "Language Model Groq",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+    "displayName": "Mistral Cloud Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatLemonade",
+    "displayName": "Lemonade Chat Model",
+    "description": "Language Model Lemonade Chat",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatOllama",
+    "displayName": "Ollama Chat Model",
+    "description": "Language Model Ollama",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+    "displayName": "OpenRouter Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatVercelAiGateway",
+    "displayName": "Vercel AI Gateway Chat Model",
+    "description": "For advanced usage with an AI chain via Vercel AI Gateway",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+    "displayName": "xAI Grok Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "displayName": "OpenAI Chat Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmOpenAi",
+    "displayName": "OpenAI Model",
+    "description": "For advanced usage with an AI chain",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmCohere",
+    "displayName": "Cohere Model",
+    "description": "Language Model Cohere",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmLemonade",
+    "displayName": "Lemonade Model",
+    "description": "Language Model Lemonade",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmOllama",
+    "displayName": "Ollama Model",
+    "description": "Language Model Ollama",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.lmOpenHuggingFaceInference",
+    "displayName": "Hugging Face Inference Model",
+    "description": "Language Model HuggingFaceInference",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.mcpClient",
+    "displayName": "MCP Client",
+    "description": "Standalone MCP Client",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.mcpClientTool",
+    "displayName": "MCP Client Tool",
+    "description": "Connect tools from an MCP Server",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.mcpTrigger",
+    "displayName": "MCP Server Trigger",
+    "description": "Expose n8n tools as an MCP Server endpoint",
+    "typeVersion": 2,
+    "is_trigger": true
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+    "displayName": "Simple Memory",
+    "description": "Stores in n8n memory, so no credentials required",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryMotorhead",
+    "displayName": "Motorhead",
+    "description": "Use Motorhead Memory",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+    "displayName": "Postgres Chat Memory",
+    "description": "Stores the chat history in Postgres table.",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryMongoDbChat",
+    "displayName": "MongoDB Chat Memory",
+    "description": "Stores the chat history in MongoDB collection.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+    "displayName": "Redis Chat Memory",
+    "description": "Stores the chat history in Redis.",
+    "typeVersion": 1.5,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryManager",
+    "displayName": "Chat Memory Manager",
+    "description": "Manage chat messages memory and use it in the workflow",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryChatRetriever",
+    "displayName": "Chat Messages Retriever",
+    "description": "Retrieve chat messages from memory and use them in the workflow",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryXata",
+    "displayName": "Xata",
+    "description": "Use Xata Memory",
+    "typeVersion": 1.4,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.memoryZep",
+    "displayName": "Zep",
+    "description": "Use Zep Memory",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+    "displayName": "Auto-fixing Output Parser",
+    "description": "Deprecated, use structured output parser",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.outputParserItemList",
+    "displayName": "Item List Output Parser",
+    "description": "Return the results as separate items",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.outputParserStructured",
+    "displayName": "Structured Output Parser",
+    "description": "Return data in a defined JSON format",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.rerankerCohere",
+    "displayName": "Reranker Cohere",
+    "description": "Use Cohere Reranker to reorder documents after retrieval from a vector store by relevance to the given query.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.retrieverContextualCompression",
+    "displayName": "Contextual Compression Retriever",
+    "description": "Enhances document similarity search by contextual compression.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+    "displayName": "Vector Store Retriever",
+    "description": "Use a Vector Store as Retriever",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.retrieverMultiQuery",
+    "displayName": "MultiQuery Retriever",
+    "description": "Automates prompt tuning, generates diverse queries and expands document pool for enhanced retrieval.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.retrieverWorkflow",
+    "displayName": "Workflow Retriever",
+    "description": "Use an n8n Workflow as Retriever",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+    "displayName": "Character Text Splitter",
+    "description": "Split text into chunks by characters",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+    "displayName": "Recursive Character Text Splitter",
+    "description": "Split text into chunks by characters recursively, recommended for most use cases",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
+    "displayName": "Token Splitter",
+    "description": "Split text into chunks by tokens",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolCalculator",
+    "displayName": "Calculator",
+    "description": "Make it easier for AI agents to perform arithmetic",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolCode",
+    "displayName": "Code Tool",
+    "description": "Write a tool in JS or Python",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+    "displayName": "HTTP Request Tool",
+    "description": "Makes an HTTP request and returns the response data",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolSearXng",
+    "displayName": "SearXNG",
+    "description": "Search in SearXNG",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolSerpApi",
+    "displayName": "SerpApi (Google Search)",
+    "description": "Search in Google using SerpAPI",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolThink",
+    "displayName": "Think Tool",
+    "description": "Invite the AI agent to do some thinking",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolVectorStore",
+    "displayName": "Vector Store Question Answer Tool",
+    "description": "Answer questions with a vector store",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolWikipedia",
+    "displayName": "Wikipedia",
+    "description": "Search in Wikipedia",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolWolframAlpha",
+    "displayName": "Wolfram|Alpha",
+    "description": "Connects to WolframAlpha's computational intelligence engine.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolWorkflow",
+    "displayName": "Call n8n Workflow Tool",
+    "description": "Uses another n8n workflow as a tool. Allows packaging any n8n node(s) as a tool.",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolWorkflow",
+    "displayName": "Call n8n Workflow Tool",
+    "description": "Uses another n8n workflow as a tool. Allows packaging any n8n node(s) as a tool.",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.manualChatTrigger",
+    "displayName": "Manual Chat Trigger",
+    "description": "Runs the flow on new manual chat message",
+    "typeVersion": 1.1,
+    "is_trigger": true
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chatTrigger",
+    "displayName": "Chat Trigger",
+    "description": "Runs the workflow when an n8n generated webchat is submitted",
+    "typeVersion": 1.4,
+    "is_trigger": true
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chat",
+    "displayName": "Respond to Chat",
+    "description": "Send a message to a chat",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreAzureAISearch",
+    "displayName": "Azure AI Search Vector Store",
+    "description": "Work with your data in Azure AI Search Vector Store",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+    "displayName": "Simple Vector Store",
+    "description": "The easiest way to experiment with vector stores, without external setup.",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreInMemoryInsert",
+    "displayName": "In Memory Vector Store Insert",
+    "description": "Insert data into an in-memory vector store",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreInMemoryLoad",
+    "displayName": "In Memory Vector Store Load",
+    "description": "Load embedded data from an in-memory vector store",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreMilvus",
+    "displayName": "Milvus Vector Store",
+    "description": "Work with your data in Milvus Vector Store",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreMongoDBAtlas",
+    "displayName": "MongoDB Atlas Vector Store",
+    "description": "Work with your data in MongoDB Atlas Vector Store",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+    "displayName": "Postgres PGVector Store",
+    "description": "Work with your data in Postgresql with the PGVector extension",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+    "displayName": "Pinecone Vector Store",
+    "description": "Work with your data in Pinecone Vector Store",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePineconeInsert",
+    "displayName": "Pinecone: Insert",
+    "description": "Insert data into Pinecone Vector Store index",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStorePineconeLoad",
+    "displayName": "Pinecone: Load",
+    "description": "Load data from Pinecone Vector Store index",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreRedis",
+    "displayName": "Redis Vector Store",
+    "description": "Work with your data in a Redis vector index",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+    "displayName": "Qdrant Vector Store",
+    "description": "Work with your data in a Qdrant collection",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+    "displayName": "Supabase Vector Store",
+    "description": "Work with your data in Supabase Vector Store",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreSupabaseInsert",
+    "displayName": "Supabase: Insert",
+    "description": "Insert data into Supabase Vector Store index [https://supabase.com/docs/guides/ai/langchain]",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreSupabaseLoad",
+    "displayName": "Supabase: Load",
+    "description": "Load data from Supabase Vector Store index",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreWeaviate",
+    "displayName": "Weaviate Vector Store",
+    "description": "Work with your data in a Weaviate Cluster",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreZep",
+    "displayName": "Zep Vector Store",
+    "description": "Work with your data in Zep Vector Store",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreZepInsert",
+    "displayName": "Zep Vector Store: Insert",
+    "description": "Insert data into Zep Vector Store index",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.vectorStoreZepLoad",
+    "displayName": "Zep Vector Store: Load",
+    "description": "Load data from Zep Vector Store index",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.toolExecutor",
+    "displayName": "Tool Executor",
+    "description": "Node to execute tools without an AI Agent",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.modelSelector",
+    "displayName": "Model Selector",
+    "description": "Use this node to select one of the connected models to this node based on workflow data",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.guardrails",
+    "displayName": "Guardrails",
+    "description": "Safeguard AI models from malicious input or prevent them from generating undesirable responses",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.guardrails",
+    "displayName": "Guardrails",
+    "description": "Safeguard AI models from malicious input or prevent them from generating undesirable responses",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.actionNetworkTool",
+    "displayName": "Action Network Tool",
+    "description": "Consume the Action Network API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.activeCampaignTool",
+    "displayName": "ActiveCampaign Tool",
+    "description": "Create and edit data in ActiveCampaign",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.adaloTool",
+    "displayName": "Adalo Tool",
+    "description": "Consume Adalo API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.affinityTool",
+    "displayName": "Affinity Tool",
+    "description": "Consume Affinity API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.agileCrmTool",
+    "displayName": "Agile CRM Tool",
+    "description": "Consume Agile CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.airtableTool",
+    "displayName": "Airtable Tool",
+    "description": "Read, update, write and delete data from Airtable",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.airtopTool",
+    "displayName": "Airtop Tool",
+    "description": "Scrape and control any site with Airtop",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.amqpTool",
+    "displayName": "AMQP Sender Tool",
+    "description": "Sends a raw-message via AMQP 1.0, executed once per item",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.apiTemplateIoTool",
+    "displayName": "APITemplate.io Tool",
+    "description": "Consume the APITemplate.io API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.asanaTool",
+    "displayName": "Asana Tool",
+    "description": "Consume Asana REST API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.autopilotTool",
+    "displayName": "Autopilot Tool",
+    "description": "Consume Autopilot API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsLambdaTool",
+    "displayName": "AWS Lambda Tool",
+    "description": "Invoke functions on AWS Lambda",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsSnsTool",
+    "displayName": "AWS SNS Tool",
+    "description": "Sends data to AWS SNS",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsS3Tool",
+    "displayName": "AWS S3 Tool",
+    "description": "Sends data to AWS S3",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsSesTool",
+    "displayName": "AWS SES Tool",
+    "description": "Sends data to AWS SES",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsTextractTool",
+    "displayName": "AWS Textract Tool",
+    "description": "Sends data to Amazon Textract",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.awsTranscribeTool",
+    "displayName": "AWS Transcribe Tool",
+    "description": "Sends data to AWS Transcribe",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bambooHrTool",
+    "displayName": "BambooHR Tool",
+    "description": "Consume BambooHR API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.baserowTool",
+    "displayName": "Baserow Tool",
+    "description": "Consume the Baserow API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.beeminderTool",
+    "displayName": "Beeminder Tool",
+    "description": "Consume Beeminder API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bitlyTool",
+    "displayName": "Bitly Tool",
+    "description": "Consume Bitly API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bitwardenTool",
+    "displayName": "Bitwarden Tool",
+    "description": "Consume the Bitwarden API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.BrandfetchTool",
+    "displayName": "Brandfetch Tool",
+    "description": "Consume Brandfetch API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.bubbleTool",
+    "displayName": "Bubble Tool",
+    "description": "Consume the Bubble Data API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.chargebeeTool",
+    "displayName": "Chargebee Tool",
+    "description": "Retrieve data from Chargebee API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.circleCiTool",
+    "displayName": "CircleCI Tool",
+    "description": "Consume CircleCI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ciscoWebexTool",
+    "displayName": "Webex by Cisco Tool",
+    "description": "Consume the Cisco Webex API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.cloudflareTool",
+    "displayName": "Cloudflare Tool",
+    "description": "Consume Cloudflare API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clearbitTool",
+    "displayName": "Clearbit Tool",
+    "description": "Consume Clearbit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clickUpTool",
+    "displayName": "ClickUp Tool",
+    "description": "Consume ClickUp API (Beta)",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.clockifyTool",
+    "displayName": "Clockify Tool",
+    "description": "Consume Clockify REST API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.cockpitTool",
+    "displayName": "Cockpit Tool",
+    "description": "Consume Cockpit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.codaTool",
+    "displayName": "Coda Tool",
+    "description": "Consume Coda API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.coinGeckoTool",
+    "displayName": "CoinGecko Tool",
+    "description": "Consume CoinGecko API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.compressionTool",
+    "displayName": "Compression Tool",
+    "description": "Compress and decompress files",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.contentfulTool",
+    "displayName": "Contentful Tool",
+    "description": "Consume Contentful API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.convertKitTool",
+    "displayName": "ConvertKit Tool",
+    "description": "Consume ConvertKit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.copperTool",
+    "displayName": "Copper Tool",
+    "description": "Consume the Copper API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.crateDbTool",
+    "displayName": "CrateDB Tool",
+    "description": "Add and update data in CrateDB",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.crowdDevTool",
+    "displayName": "crowd.dev Tool",
+    "description": "crowd.dev is an open-source suite of community and data tools built to unlock community-led growth for your organization.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.cryptoTool",
+    "displayName": "Crypto Tool",
+    "description": "Provide cryptographic utilities",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.customerIoTool",
+    "displayName": "Customer.io Tool",
+    "description": "Consume Customer.io API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dataTableTool",
+    "displayName": "Data table Tool",
+    "description": "Permanently save data across workflow executions in a table",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dateTimeTool",
+    "displayName": "Date & Time Tool",
+    "description": "Manipulate date and time values",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.deepLTool",
+    "displayName": "DeepL Tool",
+    "description": "Translate data using DeepL",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.demioTool",
+    "displayName": "Demio Tool",
+    "description": "Consume the Demio API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dhlTool",
+    "displayName": "DHL Tool",
+    "description": "Consume DHL API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.discordTool",
+    "displayName": "Discord Tool",
+    "description": "Sends data to Discord",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.discourseTool",
+    "displayName": "Discourse Tool",
+    "description": "Consume Discourse API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.driftTool",
+    "displayName": "Drift Tool",
+    "description": "Consume Drift API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dropboxTool",
+    "displayName": "Dropbox Tool",
+    "description": "Access data on Dropbox",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.dropcontactTool",
+    "displayName": "Dropcontact Tool",
+    "description": "Find B2B emails and enrich contacts",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.egoiTool",
+    "displayName": "E-goi Tool",
+    "description": "Consume E-goi API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.elasticsearchTool",
+    "displayName": "Elasticsearch Tool",
+    "description": "Consume the Elasticsearch API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.elasticSecurityTool",
+    "displayName": "Elastic Security Tool",
+    "description": "Consume the Elastic Security API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emailReadImapTool",
+    "displayName": "Email Trigger (IMAP) Tool",
+    "description": "Triggers the workflow when a new email is received",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emailSendTool",
+    "displayName": "Send Email Tool",
+    "description": "Sends an email using SMTP protocol",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.emeliaTool",
+    "displayName": "Emelia Tool",
+    "description": "Consume the Emelia API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.erpNextTool",
+    "displayName": "ERPNext Tool",
+    "description": "Consume ERPNext API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.executeCommandTool",
+    "displayName": "Execute Command Tool",
+    "description": "Executes a command on the host",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.facebookGraphApiTool",
+    "displayName": "Facebook Graph API Tool",
+    "description": "Interacts with Facebook using the Graph API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.filemakerTool",
+    "displayName": "FileMaker Tool",
+    "description": "Retrieve data from the FileMaker data API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.freshdeskTool",
+    "displayName": "Freshdesk Tool",
+    "description": "Consume Freshdesk API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.freshserviceTool",
+    "displayName": "Freshservice Tool",
+    "description": "Consume the Freshservice API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.freshworksCrmTool",
+    "displayName": "Freshworks CRM Tool",
+    "description": "Consume the Freshworks CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.getResponseTool",
+    "displayName": "GetResponse Tool",
+    "description": "Consume GetResponse API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ghostTool",
+    "displayName": "Ghost Tool",
+    "description": "Consume Ghost API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gitTool",
+    "displayName": "Git Tool",
+    "description": "Control git.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.githubTool",
+    "displayName": "GitHub Tool",
+    "description": "Consume GitHub API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gitlabTool",
+    "displayName": "GitLab Tool",
+    "description": "Retrieve data from GitLab API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gongTool",
+    "displayName": "Gong Tool",
+    "description": "Interact with Gong API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleAdsTool",
+    "displayName": "Google Ads Tool",
+    "description": "Use the Google Ads API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleAnalyticsTool",
+    "displayName": "Google Analytics Tool",
+    "description": "Use the Google Analytics API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBigQueryTool",
+    "displayName": "Google BigQuery Tool",
+    "description": "Consume Google BigQuery API",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBooksTool",
+    "displayName": "Google Books Tool",
+    "description": "Read data from Google Books",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCalendarTool",
+    "displayName": "Google Calendar Tool",
+    "description": "Consume Google Calendar API",
+    "typeVersion": 1.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleChatTool",
+    "displayName": "Google Chat Tool",
+    "description": "Consume Google Chat API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCloudNaturalLanguageTool",
+    "displayName": "Google Cloud Natural Language Tool",
+    "description": "Consume Google Cloud Natural Language API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleCloudStorageTool",
+    "displayName": "Google Cloud Storage Tool",
+    "description": "Use the Google Cloud Storage API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleContactsTool",
+    "displayName": "Google Contacts Tool",
+    "description": "Consume Google Contacts API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleDocsTool",
+    "displayName": "Google Docs Tool",
+    "description": "Consume Google Docs API.",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleDriveTool",
+    "displayName": "Google Drive Tool",
+    "description": "Access data on Google Drive",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleFirebaseCloudFirestoreTool",
+    "displayName": "Google Cloud Firestore Tool",
+    "description": "Interact with Google Firebase - Cloud Firestore API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleFirebaseRealtimeDatabaseTool",
+    "displayName": "Google Cloud Realtime Database Tool",
+    "description": "Interact with Google Firebase - Realtime Database API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gmailTool",
+    "displayName": "Gmail Tool",
+    "description": "Consume the Gmail API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gSuiteAdminTool",
+    "displayName": "Google Workspace Admin Tool",
+    "description": "Consume Google Workspace Admin API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleBusinessProfileTool",
+    "displayName": "Google Business Profile Tool",
+    "description": "Consume Google Business Profile API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googlePerspectiveTool",
+    "displayName": "Google Perspective Tool",
+    "description": "Consume Google Perspective API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleSheetsTool",
+    "displayName": "Google Sheets Tool",
+    "description": "Read, update and write data to Google Sheets",
+    "typeVersion": 4.7,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleSlidesTool",
+    "displayName": "Google Slides Tool",
+    "description": "Consume the Google Slides API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleTasksTool",
+    "displayName": "Google Tasks Tool",
+    "description": "Consume Google Tasks API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.googleTranslateTool",
+    "displayName": "Google Translate Tool",
+    "description": "Translate data using Google Translate",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.youTubeTool",
+    "displayName": "YouTube Tool",
+    "description": "Consume YouTube API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gotifyTool",
+    "displayName": "Gotify Tool",
+    "description": "Consume Gotify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.goToWebinarTool",
+    "displayName": "GoToWebinar Tool",
+    "description": "Consume the GoToWebinar API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.grafanaTool",
+    "displayName": "Grafana Tool",
+    "description": "Consume the Grafana API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.graphqlTool",
+    "displayName": "GraphQL Tool",
+    "description": "Makes a GraphQL request and returns the received data",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.gristTool",
+    "displayName": "Grist Tool",
+    "description": "Consume the Grist API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hackerNewsTool",
+    "displayName": "Hacker News Tool",
+    "description": "Consume Hacker News API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.haloPSATool",
+    "displayName": "HaloPSA Tool",
+    "description": "Consume HaloPSA API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.harvestTool",
+    "displayName": "Harvest Tool",
+    "description": "Access data on Harvest",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.helpScoutTool",
+    "displayName": "Help Scout Tool",
+    "description": "Consume Help Scout API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.highLevelTool",
+    "displayName": "HighLevel Tool",
+    "description": "Consume HighLevel API v2",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.homeAssistantTool",
+    "displayName": "Home Assistant Tool",
+    "description": "Consume Home Assistant API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.httpRequestTool",
+    "displayName": "HTTP Request Tool",
+    "description": "Makes an HTTP request and returns the response data",
+    "typeVersion": 4.3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hubspotTool",
+    "displayName": "HubSpot Tool",
+    "description": "Consume HubSpot API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.humanticAiTool",
+    "displayName": "Humantic AI Tool",
+    "description": "Consume Humantic AI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.hunterTool",
+    "displayName": "Hunter Tool",
+    "description": "Consume Hunter API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.intercomTool",
+    "displayName": "Intercom Tool",
+    "description": "Consume Intercom API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.invoiceNinjaTool",
+    "displayName": "Invoice Ninja Tool",
+    "description": "Consume Invoice Ninja API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.iterableTool",
+    "displayName": "Iterable Tool",
+    "description": "Consume Iterable API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jenkinsTool",
+    "displayName": "Jenkins Tool",
+    "description": "Consume Jenkins API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jinaAiTool",
+    "displayName": "Jina AI Tool",
+    "description": "Interact with Jina AI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jiraTool",
+    "displayName": "Jira Software Tool",
+    "description": "Consume Jira Software API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.jwtTool",
+    "displayName": "JWT Tool",
+    "description": "JWT",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.kafkaTool",
+    "displayName": "Kafka Tool",
+    "description": "Sends messages to a Kafka topic",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.keapTool",
+    "displayName": "Keap Tool",
+    "description": "Consume Keap API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.kitemakerTool",
+    "displayName": "Kitemaker Tool",
+    "description": "Consume the Kitemaker GraphQL API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.koBoToolboxTool",
+    "displayName": "KoBoToolbox Tool",
+    "description": "Work with KoBoToolbox forms and submissions",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ldapTool",
+    "displayName": "Ldap Tool",
+    "description": "Interact with LDAP servers",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.lemlistTool",
+    "displayName": "Lemlist Tool",
+    "description": "Consume the Lemlist API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.lineTool",
+    "displayName": "Line Tool",
+    "description": "Consume Line API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.linearTool",
+    "displayName": "Linear Tool",
+    "description": "Consume Linear API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.lingvaNexTool",
+    "displayName": "LingvaNex Tool",
+    "description": "Consume LingvaNex API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.linkedInTool",
+    "displayName": "LinkedIn Tool",
+    "description": "Consume LinkedIn API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.loneScaleTool",
+    "displayName": "LoneScale Tool",
+    "description": "Create List, add / delete items",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.magento2Tool",
+    "displayName": "Magento 2 Tool",
+    "description": "Consume Magento API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailcheckTool",
+    "displayName": "Mailcheck Tool",
+    "description": "Consume Mailcheck API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailchimpTool",
+    "displayName": "Mailchimp Tool",
+    "description": "Consume Mailchimp API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailerLiteTool",
+    "displayName": "MailerLite Tool",
+    "description": "Consume Mailer Lite API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailgunTool",
+    "displayName": "Mailgun Tool",
+    "description": "Sends an email via Mailgun",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mailjetTool",
+    "displayName": "Mailjet Tool",
+    "description": "Consume Mailjet API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mandrillTool",
+    "displayName": "Mandrill Tool",
+    "description": "Consume Mandrill API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.marketstackTool",
+    "displayName": "Marketstack Tool",
+    "description": "Consume Marketstack API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.matrixTool",
+    "displayName": "Matrix Tool",
+    "description": "Consume Matrix API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mattermostTool",
+    "displayName": "Mattermost Tool",
+    "description": "Sends data to Mattermost",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mauticTool",
+    "displayName": "Mautic Tool",
+    "description": "Consume Mautic API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mediumTool",
+    "displayName": "Medium Tool",
+    "description": "Consume Medium API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.messageBirdTool",
+    "displayName": "MessageBird Tool",
+    "description": "Sends SMS via MessageBird",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.metabaseTool",
+    "displayName": "Metabase Tool",
+    "description": "Use the Metabase API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftDynamicsCrmTool",
+    "displayName": "Microsoft Dynamics CRM Tool",
+    "description": "Consume Microsoft Dynamics CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftEntraTool",
+    "displayName": "Microsoft Entra ID Tool",
+    "description": "Interact with Microsoft Entra ID API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftExcelTool",
+    "displayName": "Microsoft Excel 365 Tool",
+    "description": "Consume Microsoft Excel API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftGraphSecurityTool",
+    "displayName": "Microsoft Graph Security Tool",
+    "description": "Consume the Microsoft Graph Security API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOneDriveTool",
+    "displayName": "Microsoft OneDrive Tool",
+    "description": "Consume Microsoft OneDrive API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftOutlookTool",
+    "displayName": "Microsoft Outlook Tool",
+    "description": "Consume Microsoft Outlook API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftSharePointTool",
+    "displayName": "Microsoft SharePoint Tool",
+    "description": "Interact with Microsoft SharePoint API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftSqlTool",
+    "displayName": "Microsoft SQL Tool",
+    "description": "Get, add and update data in Microsoft SQL",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftTeamsTool",
+    "displayName": "Microsoft Teams Tool",
+    "description": "Consume Microsoft Teams API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.microsoftToDoTool",
+    "displayName": "Microsoft To Do Tool",
+    "description": "Consume Microsoft To Do API.",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mispTool",
+    "displayName": "MISP Tool",
+    "description": "Consume the MISP API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mistralAiTool",
+    "displayName": "Mistral AI Tool",
+    "description": "Consume Mistral AI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.moceanTool",
+    "displayName": "Mocean Tool",
+    "description": "Send SMS and voice messages via Mocean",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mondayComTool",
+    "displayName": "Monday.com Tool",
+    "description": "Consume Monday.com API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mongoDbTool",
+    "displayName": "MongoDB Tool",
+    "description": "Find, insert and update documents in MongoDB",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.monicaCrmTool",
+    "displayName": "Monica CRM Tool",
+    "description": "Consume the Monica CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mqttTool",
+    "displayName": "MQTT Tool",
+    "description": "Push messages to MQTT",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.msg91Tool",
+    "displayName": "MSG91 Tool",
+    "description": "Sends transactional SMS via MSG91",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.mySqlTool",
+    "displayName": "MySQL Tool",
+    "description": "Get, add and update data in MySQL",
+    "typeVersion": 2.5,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.nasaTool",
+    "displayName": "NASA Tool",
+    "description": "Retrieve data from the NASA API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.netlifyTool",
+    "displayName": "Netlify Tool",
+    "description": "Consume Netlify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.nextCloudTool",
+    "displayName": "Nextcloud Tool",
+    "description": "Access data on Nextcloud",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.nocoDbTool",
+    "displayName": "NocoDB Tool",
+    "description": "Read, update, write and delete data from NocoDB",
+    "typeVersion": 3,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendInBlueTool",
+    "displayName": "Brevo Tool",
+    "description": "Consume Brevo API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.onfleetTool",
+    "displayName": "Onfleet Tool",
+    "description": "Consume Onfleet API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.notionTool",
+    "displayName": "Notion Tool",
+    "description": "Consume Notion API",
+    "typeVersion": 2.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.npmTool",
+    "displayName": "Npm Tool",
+    "description": "Consume NPM registry API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.odooTool",
+    "displayName": "Odoo Tool",
+    "description": "Consume Odoo API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.oktaTool",
+    "displayName": "Okta Tool",
+    "description": "Use the Okta API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.oneSimpleApiTool",
+    "displayName": "One Simple API Tool",
+    "description": "A toolbox of no-code utilities",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.openThesaurusTool",
+    "displayName": "OpenThesaurus Tool",
+    "description": "Get synonmns for German words using the OpenThesaurus API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.openWeatherMapTool",
+    "displayName": "OpenWeatherMap Tool",
+    "description": "Gets current and future weather information",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.oracleDatabaseTool",
+    "displayName": "Oracle Database Tool",
+    "description": "Get, add and update data in Oracle database",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.ouraTool",
+    "displayName": "Oura Tool",
+    "description": "Consume Oura API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.paddleTool",
+    "displayName": "Paddle Tool",
+    "description": "Consume Paddle API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pagerDutyTool",
+    "displayName": "PagerDuty Tool",
+    "description": "Consume PagerDuty API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.peekalinkTool",
+    "displayName": "Peekalink Tool",
+    "description": "Consume the Peekalink API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.perplexityTool",
+    "displayName": "Perplexity Tool",
+    "description": "Interact with the Perplexity API to generate AI responses with citations",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.phantombusterTool",
+    "displayName": "Phantombuster Tool",
+    "description": "Consume Phantombuster API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.philipsHueTool",
+    "displayName": "Philips Hue Tool",
+    "description": "Consume Philips Hue API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pipedriveTool",
+    "displayName": "Pipedrive Tool",
+    "description": "Create and edit data in Pipedrive",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.plivoTool",
+    "displayName": "Plivo Tool",
+    "description": "Send SMS/MMS messages or make phone calls",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postBinTool",
+    "displayName": "PostBin Tool",
+    "description": "Consume PostBin API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postgresTool",
+    "displayName": "Postgres Tool",
+    "description": "Get, add and update data in Postgres",
+    "typeVersion": 2.6,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.postHogTool",
+    "displayName": "PostHog Tool",
+    "description": "Consume PostHog API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.profitWellTool",
+    "displayName": "ProfitWell Tool",
+    "description": "Consume ProfitWell API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pushbulletTool",
+    "displayName": "Pushbullet Tool",
+    "description": "Consume Pushbullet API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pushcutTool",
+    "displayName": "Pushcut Tool",
+    "description": "Consume Pushcut API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.pushoverTool",
+    "displayName": "Pushover Tool",
+    "description": "Consume Pushover API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.questDbTool",
+    "displayName": "QuestDB Tool",
+    "description": "Get, add and update data in QuestDB",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.quickbaseTool",
+    "displayName": "Quick Base Tool",
+    "description": "Integrate with the Quick Base RESTful API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.quickbooksTool",
+    "displayName": "QuickBooks Online Tool",
+    "description": "Consume the QuickBooks Online API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.quickChartTool",
+    "displayName": "QuickChart Tool",
+    "description": "Create a chart via QuickChart",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rabbitmqTool",
+    "displayName": "RabbitMQ Tool",
+    "description": "Sends messages to a RabbitMQ topic",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.raindropTool",
+    "displayName": "Raindrop Tool",
+    "description": "Consume the Raindrop API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.redditTool",
+    "displayName": "Reddit Tool",
+    "description": "Consume the Reddit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.redisTool",
+    "displayName": "Redis Tool",
+    "description": "Get, send and update data in Redis",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rocketchatTool",
+    "displayName": "RocketChat Tool",
+    "description": "Consume RocketChat API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rssFeedReadTool",
+    "displayName": "RSS Read Tool",
+    "description": "Reads data from an RSS Feed",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.rundeckTool",
+    "displayName": "Rundeck Tool",
+    "description": "Manage Rundeck API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.s3Tool",
+    "displayName": "S3 Tool",
+    "description": "Sends data to any S3-compatible service",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.salesforceTool",
+    "displayName": "Salesforce Tool",
+    "description": "Consume Salesforce API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.salesmateTool",
+    "displayName": "Salesmate Tool",
+    "description": "Consume Salesmate API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.seaTableTool",
+    "displayName": "SeaTable Tool",
+    "description": "Consume the SeaTable API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.seaTableTool",
+    "displayName": "SeaTable Tool",
+    "description": "Consume the SeaTable API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.securityScorecardTool",
+    "displayName": "SecurityScorecard Tool",
+    "description": "Consume SecurityScorecard API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.segmentTool",
+    "displayName": "Segment Tool",
+    "description": "Consume Segment API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendGridTool",
+    "displayName": "SendGrid Tool",
+    "description": "Consume SendGrid API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sendyTool",
+    "displayName": "Sendy Tool",
+    "description": "Consume Sendy API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sentryIoTool",
+    "displayName": "Sentry.io Tool",
+    "description": "Consume Sentry.io API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.serviceNowTool",
+    "displayName": "ServiceNow Tool",
+    "description": "Consume ServiceNow API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.shopifyTool",
+    "displayName": "Shopify Tool",
+    "description": "Consume Shopify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.signl4Tool",
+    "displayName": "SIGNL4 Tool",
+    "description": "Consume SIGNL4 API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.slackTool",
+    "displayName": "Slack Tool",
+    "description": "Consume Slack API",
+    "typeVersion": 2.4,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.sms77Tool",
+    "displayName": "seven Tool",
+    "description": "Send SMS and make text-to-speech calls",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.snowflakeTool",
+    "displayName": "Snowflake Tool",
+    "description": "Get, add and update data in Snowflake",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.splunkTool",
+    "displayName": "Splunk Tool",
+    "description": "Consume the Splunk Enterprise API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.spontitTool",
+    "displayName": "Spontit Tool",
+    "description": "Consume Spontit API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.spotifyTool",
+    "displayName": "Spotify Tool",
+    "description": "Access public song data via the Spotify API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stackbyTool",
+    "displayName": "Stackby Tool",
+    "description": "Read, write, and delete data in Stackby",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.storyblokTool",
+    "displayName": "Storyblok Tool",
+    "description": "Consume Storyblok API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.strapiTool",
+    "displayName": "Strapi Tool",
+    "description": "Consume Strapi API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stravaTool",
+    "displayName": "Strava Tool",
+    "description": "Consume Strava API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.stripeTool",
+    "displayName": "Stripe Tool",
+    "description": "Consume the Stripe API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.supabaseTool",
+    "displayName": "Supabase Tool",
+    "description": "Add, get, delete and update data in a table",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.syncroMspTool",
+    "displayName": "SyncroMSP Tool",
+    "description": "Gets data from SyncroMSP",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.taigaTool",
+    "displayName": "Taiga Tool",
+    "description": "Consume Taiga API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.tapfiliateTool",
+    "displayName": "Tapfiliate Tool",
+    "description": "Consume Tapfiliate API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.telegramTool",
+    "displayName": "Telegram Tool",
+    "description": "Sends data to Telegram",
+    "typeVersion": 1.2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.theHiveProjectTool",
+    "displayName": "TheHive 5 Tool",
+    "description": "Consume TheHive 5 API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.theHiveTool",
+    "displayName": "TheHive Tool",
+    "description": "Consume TheHive API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.timescaleDbTool",
+    "displayName": "TimescaleDB Tool",
+    "description": "Add and update data in TimescaleDB",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.todoistTool",
+    "displayName": "Todoist Tool",
+    "description": "Consume Todoist API",
+    "typeVersion": 2.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.totpTool",
+    "displayName": "TOTP Tool",
+    "description": "Generate a time-based one-time password",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.travisCiTool",
+    "displayName": "TravisCI Tool",
+    "description": "Consume TravisCI API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.trelloTool",
+    "displayName": "Trello Tool",
+    "description": "Create, change and delete boards and cards",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twakeTool",
+    "displayName": "Twake Tool",
+    "description": "Consume Twake API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twilioTool",
+    "displayName": "Twilio Tool",
+    "description": "Send SMS and WhatsApp messages or make phone calls",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twistTool",
+    "displayName": "Twist Tool",
+    "description": "Consume Twist API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.twitterTool",
+    "displayName": "X (Formerly Twitter) Tool",
+    "description": "Post, like, and search tweets, send messages, search users, and add users to lists",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.unleashedSoftwareTool",
+    "displayName": "Unleashed Software Tool",
+    "description": "Consume Unleashed Software API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.upleadTool",
+    "displayName": "Uplead Tool",
+    "description": "Consume Uplead API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.uprocTool",
+    "displayName": "uProc Tool",
+    "description": "Consume uProc API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.uptimeRobotTool",
+    "displayName": "UptimeRobot Tool",
+    "description": "Consume UptimeRobot API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.urlScanIoTool",
+    "displayName": "urlscan.io Tool",
+    "description": "Provides various utilities for monitoring websites like health checks or screenshots",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.veroTool",
+    "displayName": "Vero Tool",
+    "description": "Consume Vero API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.venafiTlsProtectCloudTool",
+    "displayName": "Venafi TLS Protect Cloud Tool",
+    "description": "Consume Venafi TLS Protect Cloud API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.venafiTlsProtectDatacenterTool",
+    "displayName": "Venafi TLS Protect Datacenter Tool",
+    "description": "Consume Venafi TLS Protect Datacenter",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.vonageTool",
+    "displayName": "Vonage Tool",
+    "description": "Consume Vonage API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.webflowTool",
+    "displayName": "Webflow Tool",
+    "description": "Consume the Webflow API",
+    "typeVersion": 2,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wekanTool",
+    "displayName": "Wekan Tool",
+    "description": "Consume Wekan API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.whatsAppTool",
+    "displayName": "WhatsApp Business Cloud Tool",
+    "description": "Access WhatsApp API",
+    "typeVersion": 1.1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wooCommerceTool",
+    "displayName": "WooCommerce Tool",
+    "description": "Consume WooCommerce API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.wordpressTool",
+    "displayName": "Wordpress Tool",
+    "description": "Consume Wordpress API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.xeroTool",
+    "displayName": "Xero Tool",
+    "description": "Consume Xero API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.yourlsTool",
+    "displayName": "Yourls Tool",
+    "description": "Consume Yourls API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zammadTool",
+    "displayName": "Zammad Tool",
+    "description": "Consume the Zammad API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zendeskTool",
+    "displayName": "Zendesk Tool",
+    "description": "Consume Zendesk API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zohoCrmTool",
+    "displayName": "Zoho CRM Tool",
+    "description": "Consume Zoho CRM API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zoomTool",
+    "displayName": "Zoom Tool",
+    "description": "Consume Zoom API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "n8n-nodes-base.zulipTool",
+    "displayName": "Zulip Tool",
+    "description": "Consume Zulip API",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.anthropicTool",
+    "displayName": "Anthropic Tool",
+    "description": "Interact with Anthropic AI models",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.googleGeminiTool",
+    "displayName": "Google Gemini Tool",
+    "description": "Interact with Google Gemini AI models",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.ollamaTool",
+    "displayName": "Ollama Tool",
+    "description": "Interact with Ollama AI models",
+    "typeVersion": 1,
+    "is_trigger": false
+  },
+  {
+    "name": "@n8n/n8n-nodes-langchain.chatTool",
+    "displayName": "Respond to Chat Tool",
+    "description": "Send a message to a chat",
+    "typeVersion": 1,
+    "is_trigger": false
+  }
+]

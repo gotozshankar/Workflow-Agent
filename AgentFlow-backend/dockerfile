@@ -1,0 +1,40 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# System dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy app files (env folder & __pycache__ skip பண்ணும்)
+COPY app.py .
+COPY database.py .
+COPY logger_config.py .
+COPY n8n_integration.py .
+COPY node_retriever.py .
+COPY ssl_utils.py .
+COPY vector_store_nodes.py .
+COPY workflow_generator_v2.py .
+COPY creating_nodes_from_n8n.py .
+COPY *.json .
+
+# NEW: Copy workflows/templates folder (all subfolders and JSON files inside)
+COPY workflows/templates/ /app/workflows/templates/
+
+EXPOSE 10000
+
+# Install gunicorn in your requirements.txt or here
+RUN pip install gunicorn
+CMD ["gunicorn", "app:app", \
+    "--bind", "0.0.0.0:10000", \
+    "--workers", "1", \
+    "--timeout", "300", \
+    "--keep-alive", "5", \
+    "--log-level", "info"]

@@ -1,0 +1,13 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "providers": ["node"],
+      "buildCommand": "cd AgentFlowAutomator && npm install && npm run build"
+    }
+  },
+  "deploy": {
+    "startCommand": "cd AgentFlowAutomator && npm run start",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}

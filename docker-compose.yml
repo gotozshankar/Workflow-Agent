@@ -1,0 +1,18 @@
+services:
+  backend:
+    image: sivachan03/agentflow-backend:latest
+    container_name: agentflow-backend
+    ports:
+      - "5001:10000"
+    env_file:
+      - ./.env
+    restart: always
+
+  frontend:
+    image: sivachan03/agentflow-frontend:latest
+    container_name: agentflow-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always

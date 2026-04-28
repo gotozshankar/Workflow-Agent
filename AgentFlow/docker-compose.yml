@@ -1,0 +1,34 @@
+services:
+  backend:
+    image: sivachan03/agentflow-backend:latest
+    container_name: agentflow-backend
+    ports:
+      - "5001:10000"
+    env_file:
+      - ./.env
+    restart: always
+    networks:
+      - agentflow-network
+    volumes: # <-- ADD THESE THREE LINES
+      - ./chroma_db:/app/chroma_db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:10000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    image: sivachan03/agentflow-frontend:latest
+    container_name: agentflow-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - agentflow-network # ← ADD
+    restart: always
+
+networks: # ← ADD இந்த block
+  agentflow-network:
+    driver: bridge

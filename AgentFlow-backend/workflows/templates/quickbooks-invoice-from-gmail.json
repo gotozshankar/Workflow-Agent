@@ -1,0 +1,408 @@
+{
+  "name": "Invoice Processing - create quickbook invoice",
+  "meta": {
+    "description": "Extract invoice data from Gmail PDF attachment and create QuickBooks invoice. Checks if customer exists, creates if needed, then creates invoice with line items. PROVEN WORKING VERSION.",
+    "keywords": [
+      "quickbooks",
+      "invoice",
+      "gmail",
+      "pdf",
+      "email",
+      "attachment",
+      "create",
+      "qb",
+      "quickbook"
+    ],
+    "version": "1.0",
+    "createdDate": "2026-04-26",
+    "templateType": "quickbooks-invoice",
+    "category": "finance",
+    "trigger": "gmail",
+    "autoload": true
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {
+          "q": "subject:invoice has:attachment"
+        },
+        "options": {
+          "downloadAttachments": true
+        }
+      },
+      "id": "a9697da0-67a3-48d5-9bd2-7a849da134b3",
+      "name": "Gmail Trigger",
+      "position": [-800, 64],
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xV4G0URcXHuEtSZw",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "cond-subject-invoice",
+              "leftValue": "={{ $json.subject.toLowerCase().includes('invoice') }}",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              },
+              "rightValue": "invoice"
+            },
+            {
+              "id": "cond-has-attachment",
+              "leftValue": "={{ $json.headers['content-type'].toLowerCase().includes('multipart/mixed') }}",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              },
+              "rightValue": 0
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "4bed473e-8ff5-476d-b970-d1cc6f40ec1d",
+      "name": "Has Invoice Attachment?",
+      "position": [-400, 64],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "attachment_0",
+        "options": {}
+      },
+      "id": "33b0caa4-eca2-4e5d-9efd-0422301ce329",
+      "name": "Extract From PDF3",
+      "position": [0, 0],
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Extract ALL customers from the PDF text. There may be ONE or MULTIPLE customers.\n\nReturn ONLY a valid JSON object – no explanation, no markdown, no code blocks:\n{\n  \"totalCustomers\": number,\n  \"customers\": [\n    {\n      \"customerName\": \"string\",\n      \"invoiceNumber\": \"string\",\n      \"invoiceDate\": \"YYYY-MM-DD\",\n      \"dueDate\": \"YYYY-MM-DD\",\n      \"lineItems\": [\n        {\n          \"Description\": \"string\",\n          \"Quantity\": number,\n          \"UnitPrice\": number,\n          \"Amount\": number\n        }\n      ],\n      \"customerTotal\": number\n    }\n  ]\n}\n\nIMPORTANT:\n- If the PDF contains invoices for multiple customers, include each one as a separate entry in the customers array.\n- Each customer must have their own invoiceNumber, dates, and lineItems.\n- customerTotal must equal the sum of all lineItem Amounts for that customer.\n\nPDF Text: {{$json.text}}\n\nUser Request: create quickbook invoice",
+        "options": {}
+      },
+      "id": "39dd901a-e341-4464-9aa1-8cae28b293b3",
+      "name": "AI Agent5",
+      "position": [0, 160],
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "fc73bcfb-e8f3-4d25-a9c0-0af1716f9c99",
+      "name": "Azure OpenAI Chat Model3",
+      "position": [0, 320],
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "BQHyPiRfKrLWajth",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const aiOutputString = $('AI Agent5').first().json.output;\n\nlet aiData;\ntry {\n  const cleaned = aiOutputString\n    .replace(/```json/g, '')\n    .replace(/```/g, '')\n    .trim();\n  aiData = JSON.parse(cleaned);\n} catch (e) {\n  throw new Error('AI Output parse failed: ' + aiOutputString);\n}\n\nif (!aiData.customers || aiData.customers.length === 0) {\n  throw new Error('No customers found in AI output: ' + JSON.stringify(aiData));\n}\n\n// Single customer only — take the first one\nconst customer = aiData.customers[0];\n\nreturn [{\n  json: {\n    customerName: customer.customerName || '',\n    invoiceNumber: customer.invoiceNumber || 'INV-001',\n    invoiceDate: customer.invoiceDate || '2025-01-01',\n    dueDate: customer.dueDate || '2025-01-31',\n    customerTotal: customer.customerTotal || 0,\n    lineItems: customer.lineItems || []\n  }\n}];"
+      },
+      "id": "946bad91-b334-4a65-9995-15532451d8ba",
+      "name": "Parse Customer",
+      "position": [400, 160],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {}
+      },
+      "id": "7a22c3ca-9bca-47db-97a7-df226ce07b5c",
+      "name": "Search QuickBooks Customer3",
+      "position": [800, 160],
+      "type": "n8n-nodes-base.quickbooks",
+      "typeVersion": 1,
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "MnSu3tcxxyouWr7u",
+          "name": "QuickBooks Online account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "b016be4c-245a-47c9-bb00-ea16f82c6ad6",
+              "leftValue": "={{ $items('Search QuickBooks Customer3').filter(c => {\n  const qbName = (c.json.DisplayName || '').replace(/\"/g, '').trim().toLowerCase();\n  const pdfName = $('Parse Customer').item.json.customerName.trim().toLowerCase();\n  return qbName === pdfName;\n}).length }}",
+              "operator": {
+                "operation": "gt",
+                "type": "number"
+              },
+              "rightValue": 0
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a5cd9772-563c-4996-b9f6-f41d93413bf6",
+      "name": "If Customer Exists3",
+      "position": [1200, 160],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "const customerName = $('Parse Customer').item.json.customerName;\n\nconst allCustomers = $items('Search QuickBooks Customer3');\nconst match = allCustomers.find(c => {\n  const qbName = (c.json.DisplayName || '').replace(/\"/g, '').trim().toLowerCase();\n  return qbName === customerName.trim().toLowerCase();\n});\n\nlet customerId;\nif (match) {\n  customerId = match.json.Id;\n} else if ($json.Id) {\n  customerId = $json.Id;\n} else {\n  throw new Error('No customer ID found for: ' + customerName);\n}\nif (!customerId) {\n  throw new Error('Could not resolve QB customer ID for: ' + customerName);\n}\n\nconst lineItems = $('Parse Customer').item.json.lineItems || [];\n\nconst qbLines = lineItems.map(item => ({\n  \"Amount\": Number(item.Amount),\n  \"Description\": String(item.Description),\n  \"DetailType\": \"SalesItemLineDetail\",\n  \"SalesItemLineDetail\": {\n    \"Qty\": Number(item.Quantity),\n    \"UnitPrice\": Number(item.UnitPrice),\n    \"ItemRef\": { \"value\": \"1\" }\n  }\n}));\n\nreturn {\n  json: {\n    ...$('Parse Customer').item.json,\n    qbLines,\n    customerId: customerId.toString()\n  }\n};"
+      },
+      "id": "91816a8f-1f7d-4f45-8038-46a5bb536ce5",
+      "name": "Format QB Lines5",
+      "position": [1600, 80],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "displayName": "={{ $('Parse Customer').item.json.customerName }}",
+        "additionalFields": {
+          "FamilyName": "={{ $('Parse Customer').item.json.customerName.split(' ').slice(1).join(' ') || 'Customer' }}",
+          "GivenName": "={{ $('Parse Customer').item.json.customerName.split(' ')[0] }}",
+          "PrintOnCheckName": "={{ $('Parse Customer').item.json.customerName }}"
+        }
+      },
+      "alwaysOutputData": true,
+      "executeOnce": false,
+      "id": "45fcb6c0-06ea-44f4-bc91-1cec129c760e",
+      "name": "Create QuickBooks Customer3",
+      "position": [1600, 240],
+      "type": "n8n-nodes-base.quickbooks",
+      "typeVersion": 1,
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "MnSu3tcxxyouWr7u",
+          "name": "QuickBooks Online account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://sandbox-quickbooks.api.intuit.com/v3/company/9341456901943745/invoice?minorversion=65",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "quickBooksOAuth2Api",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{\n  JSON.stringify({\n    \"DocNumber\": $json.invoiceNumber,\n    \"TxnDate\": $json.invoiceDate,\n    \"DueDate\": $json.dueDate,\n    \"CustomerRef\": {\n      \"value\": $json.customerId\n    },\n    \"Line\": $json.qbLines\n  })\n}}",
+        "options": {}
+      },
+      "id": "edb1d9e4-a1da-44da-a84f-998833296fa2",
+      "name": "HTTP Request4",
+      "position": [2000, 160],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "credentials": {
+        "quickBooksOAuth2Api": {
+          "id": "MnSu3tcxxyouWr7u",
+          "name": "QuickBooks Online account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "godlive99@gmail.com",
+        "subject": "Invoice Created Successfully",
+        "message": "=HI,\n\nThe Invoice has been created successfully.\n\nInvoice Id: {{ $json.Invoice.Id }}\nDoc Number: {{ $json.Invoice.DocNumber }}\n\nThank you",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [3520, 304],
+      "id": "630fef2a-4a79-4965-a9a1-d128c8da5762",
+      "name": "Send a message",
+      "webhookId": "7cdd9a0f-0896-4e3f-bc69-67282fb0a624",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xV4G0URcXHuEtSZw",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Has Invoice Attachment?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Invoice Attachment?": {
+      "main": [
+        [
+          {
+            "node": "Extract From PDF3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract From PDF3": {
+      "main": [
+        [
+          {
+            "node": "AI Agent5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Azure OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent5",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent5": {
+      "main": [
+        [
+          {
+            "node": "Parse Customer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Customer": {
+      "main": [
+        [
+          {
+            "node": "Search QuickBooks Customer3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search QuickBooks Customer3": {
+      "main": [
+        [
+          {
+            "node": "If Customer Exists3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Customer Exists3": {
+      "main": [
+        [
+          {
+            "node": "Format QB Lines5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Create QuickBooks Customer3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create QuickBooks Customer3": {
+      "main": [
+        [
+          {
+            "node": "Format QB Lines5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format QB Lines5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
