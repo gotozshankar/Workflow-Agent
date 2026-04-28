@@ -1644,334 +1644,6 @@ def impersonate_user(user_id):
         identity=str(user.id), additional_claims={"role": user.role, "name": user.name}
     )
     return jsonify({"token": token, "user": user.to_dict()}), 200
-
-# ═════════════════════════════════════════════════════════════════════════════
-# WORKFLOW TEMPLATE IMPORT ENDPOINTS
-# ═════════════════════════════════════════════════════════════════════════════
-
-@app.route("/api/workflows/templates", methods=["GET", "OPTIONS"])
-def list_workflow_templates():
-    """List available workflow templates from local templates directory."""
-    if request.method == "OPTIONS":
-        return jsonify({"status": "ok"}), 200
-    
-    try:
-        import os
-        import json as json_lib
-        
-        templates_dir = os.path.join(os.path.dirname(__file__), "workflows", "templates")
-        templates = []
-        
-        if not os.path.exists(templates_dir):
-            return jsonify({"templates": [], "message": "No templates directory found"}), 200
-        
-        for filename in os.listdir(templates_dir):
-            if filename.endswith(".json"):
-                filepath = os.path.join(templates_dir, filename)
-                try:
-                    with open(filepath, "r") as f:
-                        template_data = json_lib.load(f)
-                    
-                    templates.append({
-                        "filename": filename,
-                        "name": template_data.get("name", filename.replace(".json", "")),
-                        "description": template_data.get("meta", {}).get("description", ""),
-                        "nodeCount": len(template_data.get("nodes", [])),
-                        "keywords": template_data.get("meta", {}).get("keywords", [])
-                    })
-                except Exception as e:
-                    logger.warning(f"Failed to load template {filename}: {e}")
-        
-        return jsonify({"success": True, "templates": templates}), 200
-    
-    except Exception as e:
-        logger.error(f"Error listing templates: {e}")
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-@app.route("/api/workflows/templates/<template_name>", methods=["GET", "OPTIONS"])
-def get_workflow_template(template_name):
-    """Load a specific workflow template from local file."""
-    if request.method == "OPTIONS":
-        return jsonify({"status": "ok"}), 200
-    
-    try:
-        import os
-        import json as json_lib
-        
-        # Sanitize template name to prevent directory traversal
-        template_name = os.path.basename(template_name)
-        if not template_name.endswith(".json"):
-            template_name += ".json"
-        
-        templates_dir = os.path.join(os.path.dirname(__file__), "workflows", "templates")
-        template_path = os.path.join(templates_dir, template_name)
-        
-        # Verify the path is within templates directory
-        if not os.path.abspath(template_path).startswith(os.path.abspath(templates_dir)):
-            return jsonify({"success": False, "error": "Invalid template path"}), 400
-        
-        if not os.path.exists(template_path):
-            return jsonify({"success": False, "error": f"Template '{template_name}' not found"}), 404
-        
-        with open(template_path, "r") as f:
-            workflow = json_lib.load(f)
-        
-        logger.info(f"✅ Loaded template: {template_name}")
-        return jsonify({"success": True, "workflow": workflow}), 200
-    
-    except Exception as e:
-        logger.error(f"Error loading template: {e}")
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-@app.route("/api/workflows/templates/suggest", methods=["POST", "OPTIONS"])
-def suggest_workflow_template():
-    """Suggest the best matching template based on user prompt keywords."""
-    if request.method == "OPTIONS":
-        return jsonify({"status": "ok"}), 200
-    
-    try:
-        import os
-        import json as json_lib
-        
-        data = request.get_json() or {}
-        prompt = data.get("prompt", "").lower()
-        
-        if not prompt:
-            return jsonify({"success": False, "error": "Prompt is required"}), 400
-        
-        templates_dir = os.path.join(os.path.dirname(__file__), "workflows", "templates")
-        best_match = None
-        best_score = 0
-        
-        if not os.path.exists(templates_dir):
-            return jsonify({"success": True, "suggestion": None, "message": "No templates available"}), 200
-        
-        # Check each template for keyword matches
-        for filename in os.listdir(templates_dir):
-            if filename.endswith(".json"):
-                filepath = os.path.join(templates_dir, filename)
-                try:
-                    with open(filepath, "r") as f:
-                        template_data = json_lib.load(f)
-                    
-                    keywords = template_data.get("meta", {}).get("keywords", [])
-                    description = template_data.get("meta", {}).get("description", "").lower()
-                    
-                    # Score based on keyword matches
-                    score = 0
-                    for keyword in keywords:
-                        if keyword.lower() in prompt:
-                            score += 2
-                    
-                    # Score based on description matches
-                    for word in prompt.split():
-                        if word in description:
-                            score += 1
-                    
-                    if score > best_score:
-                        best_score = score
-                        best_match = {
-                            "filename": filename,
-                            "name": template_data.get("name", filename.replace(".json", "")),
-                            "description": description,
-                            "nodeCount": len(template_data.get("nodes", [])),
-                            "score": score
-                        }
-                
-                except Exception as e:
-                    logger.warning(f"Failed to process template {filename}: {e}")
-        
-        if best_match and best_score > 0:
-            logger.info(f"✅ Suggested template: {best_match['filename']} (score: {best_score})")
-            return jsonify({"success": True, "suggestion": best_match, "score": best_score}), 200
-        else:
-            return jsonify({"success": True, "suggestion": None, "message": "No matching templates found"}), 200
-    
-    except Exception as e:
-        logger.error(f"Error suggesting template: {e}")
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-@app.route("/api/workflows/import-template", methods=["POST", "OPTIONS"])
-def import_template_workflow():
-    """Import a template and optionally customize it with user prompt."""
-    if request.method == "OPTIONS":
-        return jsonify({"status": "ok"}), 200
-    
-    try:
-        import os
-        import json as json_lib
-        
-        data = request.get_json() or {}
-        template_name = data.get("templateName")
-        user_prompt = data.get("prompt", "")
-        
-        if not template_name:
-            return jsonify({"success": False, "error": "Template name is required"}), 400
-        
-        # Load the template
-        template_name = os.path.basename(template_name)
-        if not template_name.endswith(".json"):
-            template_name += ".json"
-        
-        templates_dir = os.path.join(os.path.dirname(__file__), "workflows", "templates")
-        template_path = os.path.join(templates_dir, template_name)
-        
-        if not os.path.exists(template_path):
-            return jsonify({"success": False, "error": f"Template '{template_name}' not found"}), 404
-        
-        with open(template_path, "r") as f:
-            workflow = json_lib.load(f)
-        
-        # Customize the workflow with user prompt if provided
-        if user_prompt:
-            workflow["name"] = f"{workflow.get('name', 'Workflow')} - {user_prompt[:50]}"
-            
-            # Update any AI Agent nodes with user context
-            for node in workflow.get("nodes", []):
-                if "agent" in node.get("type", "").lower() and "parameters" in node:
-                    text_param = node["parameters"].get("text", "")
-                    if text_param and user_prompt not in text_param:
-                        node["parameters"]["text"] = f"{text_param}\n\nUser Request: {user_prompt}"
-        
-        logger.info(f"✅ Imported template: {template_name}")
-        return jsonify({
-            "success": True,
-            "workflow": workflow,
-            "nodeCount": len(workflow.get("nodes", [])),
-            "message": f"Template '{template_name}' loaded successfully"
-        }), 200
-    
-    except Exception as e:
-        logger.error(f"Error importing template: {e}")
-        import traceback
-        traceback.print_exc()
-        return jsonify({"success": False, "error": str(e)}), 500
-
-# ────────────────────────────────────────────────────────────────────────────
-# QB INVOICE INTENT DETECTION WITH AI
-# ────────────────────────────────────────────────────────────────────────────
-
-def detect_qb_invoice_intent(user_prompt: str) -> tuple[bool, str]:
-    """
-    Use Azure OpenAI to detect if user wants to create QB invoice from Gmail attachment.
-    
-    Returns: (is_qb_invoice: bool, email_address: str or None)
-    
-    The AI will analyze the prompt for intent and extract email if present.
-    Response format: {"isQBInvoice": true/false, "email": "email@example.com" or null}
-    """
-    print(f"\n{'='*80}")
-    print(f"🔍 [DETECT_QB_INTENT] Called with prompt: {user_prompt[:100]}...")
-    print(f"🔍 [DETECT_QB_INTENT] Using DEPLOYMENT_NAME: {DEPLOYMENT_NAME}")
-    print(f"🔍 [DETECT_QB_INTENT] Using Azure endpoint: {endpoint}")
-    print(f"{'='*80}\n")
-    
-    if not user_prompt:
-        print("❌ [DETECT_QB_INTENT] Empty prompt, returning False")
-        return False, None
-    
-    try:
-        # System prompt for the AI to analyze QB invoice intent
-        system_prompt = """You are an expert workflow analyzer. Your task is to determine if a user prompt indicates they want to:
-1. Create a QuickBooks invoice
-2. Extract data from a PDF/Gmail attachment
-3. Process customer information
-
-Analyze the prompt and respond with ONLY a JSON object (no markdown, no explanation):
-{"isQBInvoice": true/false, "email": "extracted@email.com" or null}
-
-Examples:
-- "Create a quickbooks invoice from gmail pdf attachment to sales@company.com" → {"isQBInvoice": true, "email": "sales@company.com"}
-- "Process QB invoices from Gmail attachments for customers" → {"isQBInvoice": true, "email": null}
-- "Send invoice emails to customers" → {"isQBInvoice": false, "email": null}
-- "Generate a workflow that extracts PDFs" → {"isQBInvoice": false, "email": null}
-
-Consider variations like:
-- "QB", "QuickBooks", "Quickbook"
-- "invoice", "bill", "receipt"
-- "gmail", "email", "mail attachment", "PDF"
-- "customer", "client", "vendor"
-
-Be lenient with phrasing but require BOTH QB/invoice context AND PDF/email context.
-"""
-        
-        response = client.chat.completions.create(
-            model=DEPLOYMENT_NAME,  # Use existing Azure OpenAI client
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Analyze this prompt: {user_prompt}"}
-            ],
-            max_tokens=100,
-            temperature=0.1,  # Low temperature for consistent decisions
-        )
-        
-        response_text = response.choices[0].message.content.strip()
-        print(f"🤖 AI Intent Detection Response: {response_text}")
-        
-        # Parse JSON response
-        result = json.loads(response_text)
-        print(f"✅ Parsed AI Result: {result}")
-        is_qb_invoice = result.get("isQBInvoice", False)
-        email = result.get("email")
-        
-        print(f"✅ QB Invoice Intent: {is_qb_invoice}, Email: {email}")
-        return is_qb_invoice, email
-        
-    except json.JSONDecodeError as je:
-        print(f"⚠️ Failed to parse AI response as JSON: {je}")
-        # Fallback: try to extract email anyway
-        email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
-        matches = re.findall(email_pattern, user_prompt)
-        email = matches[0] if matches else None
-        return False, email
-        
-    except Exception as e:
-        print(f"⚠️ AI intent detection failed: {e}")
-        # Fallback to regex email extraction
-        email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
-        matches = re.findall(email_pattern, user_prompt)
-        email = matches[0] if matches else None
-        return False, email
-
-
-def customize_template_for_email(workflow: dict, email_address: str) -> dict:
-    """
-    Customize template by injecting email address into Gmail-related nodes.
-    Only modifies email parameters, preserves all other nodes/connections.
-    """
-    if not email_address or not workflow:
-        return workflow
-    
-    nodes = workflow.get("nodes", [])
-    
-    for node in nodes:
-        node_type = node.get("type", "")
-        node_name = node.get("name", "").lower()
-        
-        # Gmail Send node – matches any node that is used to send emails
-        if "gmail" in node_type and node_type.endswith(".gmail"):
-            # This is a "gmail" node (which can send, reply, etc.)
-            if "parameters" not in node:
-                node["parameters"] = {}
-            node["parameters"]["sendTo"] = email_address
-            print(f"✅ Updated Gmail Send node '{node.get('name')}' email to: {email_address}")
-        
-        # Also check by common send-related names (optional)
-        elif any(keyword in node_name for keyword in ["send", "reply"]):
-            if "parameters" not in node:
-                node["parameters"] = {}
-            node["parameters"]["sendTo"] = email_address
-            print(f"✅ Updated node '{node.get('name')}' (type {node_type}) email to: {email_address}")
-        
-        # Gmail Trigger – no change needed, just log
-        elif "gmailtrigger" in node_type.lower():
-            print(f"✅ Found Gmail Trigger node: {node.get('name')}")
-    
-    return workflow
-
 @app.route("/api/generate-workflow-new", methods=["POST", "OPTIONS"])
 def generate_workflow_new():
     """
@@ -2029,65 +1701,6 @@ def generate_workflow_new():
         # ── Route based on workflow type ──────────────────────────────
         workflow = None
         
-        # ── CRITICAL: Check QB invoice intent FIRST (AI-powered) ──────
-        print(f"🔍 Analyzing prompt for QB invoice intent using AI...")
-        is_qb_invoice, extracted_email = detect_qb_invoice_intent(user_prompt)
-        
-        if is_qb_invoice:
-            print("🎯 QB Invoice Intent Detected by AI! Loading template directly...")
-            try:
-                import os
-                import json as json_lib
-                
-                template_path = os.path.join(
-                    os.path.dirname(__file__), 
-                    "workflows", 
-                    "templates", 
-                    "quickbooks-invoice-from-gmail.json"
-                )
-                
-                if not os.path.exists(template_path):
-                    raise FileNotFoundError(f"QB Invoice template not found at {template_path}")
-                
-                with open(template_path, "r") as f:
-                    workflow = json_lib.load(f)
-                
-                print(f"✅ QB Invoice template loaded with {len(workflow.get('nodes', []))} nodes")
-                
-                # Use email extracted by AI, or fallback to None
-                if extracted_email:
-                    workflow = customize_template_for_email(workflow, extracted_email)
-                    print(f"✅ Template customized with email: {extracted_email}")
-                else:
-                    print("ℹ️ No email found in prompt - template loaded without email customization")
-                
-                # Update workflow name with user context
-                if user_prompt:
-                    workflow["name"] = f"QB Invoice from Gmail - {user_prompt[:40]}"
-                
-                print("✅ QB Invoice workflow loaded and customized")
-                
-                # Return immediately - SKIP all other processing
-                return jsonify(
-                    {
-                        "success": True,
-                        "workflow": workflow,
-                        "workflow_type": "quickbooks-invoice",
-                        "template_used": True,
-                        "email_extracted": extracted_email,
-                        "validation": {"success": True, "valid_types": [], "invalid_types": []},
-                        "attempts": 1,
-                    }
-                )
-                
-            except Exception as qb_err:
-                print(f"⚠️ QB Invoice intent detected but template error: {qb_err}")
-                import traceback
-                traceback.print_exc()
-                # Fall through to normal processing
-        else:
-            print("ℹ️ No QB invoice intent detected - proceeding with normal workflow generation")
-        
         if workflow_type == "invoice":
             # Load invoice template and enhance it
             print("📋 Loading invoice workflow template...")
@@ -2136,115 +1749,37 @@ def generate_workflow_new():
                     500,
                 )
         else:
-            # Default: Normal workflow generation
-            # ── STEP 1: Try to find matching template (silent, hidden from user) ──
-            template_used = False
+            # Default: Normal workflow generation using LangGraph
+            print("🚀 Generating normal workflow with LangGraph...")
             try:
-                import os
-                import json as json_lib
-                
-                templates_dir = os.path.join(os.path.dirname(__file__), "workflows", "templates")
-                best_match = None
-                best_score = 0
-                
-                if os.path.exists(templates_dir):
-                    print(f"🔍 Checking {len(os.listdir(templates_dir))} templates for match...")
-                    
-                    for filename in os.listdir(templates_dir):
-                        if filename.endswith(".json"):
-                            filepath = os.path.join(templates_dir, filename)
-                            try:
-                                with open(filepath, "r") as f:
-                                    template_data = json_lib.load(f)
-                                
-                                keywords = template_data.get("meta", {}).get("keywords", [])
-                                description = template_data.get("meta", {}).get("description", "").lower()
-                                prompt_lower = user_prompt.lower()
-                                
-                                # Score based on keyword matches
-                                score = 0
-                                for keyword in keywords:
-                                    if keyword.lower() in prompt_lower:
-                                        score += 2
-                                
-                                # Score based on description matches
-                                for word in prompt_lower.split():
-                                    if word in description:
-                                        score += 1
-                                
-                                if score > best_score:
-                                    best_score = score
-                                    best_match = {
-                                        "path": filepath,
-                                        "filename": filename,
-                                        "data": template_data,
-                                        "score": score
-                                    }
-                            
-                            except Exception as e:
-                                logger.debug(f"Could not load template {filename}: {e}")
-                
-                # ── STEP 2: Use template if good match (score >= 3) ──
-                if best_match and best_score >= 3:
-                    try:
-                        workflow = best_match["data"]
-                        
-                        # Customize with user prompt
-                        if user_prompt:
-                            workflow["name"] = f"{workflow.get('name', 'Workflow')} - {user_prompt[:50]}"
-                            
-                            # Enhance AI Agent nodes with user context
-                            for node in workflow.get("nodes", []):
-                                if "agent" in node.get("type", "").lower() and "parameters" in node:
-                                    text_param = node["parameters"].get("text", "")
-                                    if text_param and user_prompt not in text_param:
-                                        # Add user request to system message instead
-                                        system_msg = node["parameters"].get("options", {}).get("systemMessage", "")
-                                        if system_msg:
-                                            node["parameters"]["options"]["systemMessage"] = system_msg + f"\n\nUser Request: {user_prompt}"
-                        
-                        template_used = True
-                        print(f"✅ Template match found (score: {best_score}) - using '{best_match['filename']}'")
-                    
-                    except Exception as template_err:
-                        logger.warning(f"Failed to use template, falling back to LLM: {template_err}")
-                        template_used = False
-            
-            except Exception as template_scan_err:
-                logger.debug(f"Template scanning skipped: {template_scan_err}")
-            
-            # ── STEP 3: If no template matched, use LangGraph generation ──
-            if not template_used:
-                print("🚀 Generating with LangGraph (no template matched)...")
-                try:
-                    generator = WorkflowGeneratorV2()
-                    workflow = generator.generate(user_prompt)
-                    print("✅ Workflow generated successfully")
+                generator = WorkflowGeneratorV2()
+                workflow = generator.generate(user_prompt)
+                print("✅ Workflow generated successfully")
 
-                    # ── Final safety pass: ensure AI Agent nodes have promptType ──
-                    for node in workflow.get("nodes", []):
-                        if "langchain.agent" in node.get("type", ""):
-                            if "parameters" not in node:
-                                node["parameters"] = {}
-                            if not node["parameters"].get("promptType"):
-                                node["parameters"]["promptType"] = "auto"
-                                print(f"  🔧 Post-gen: injected promptType=auto for '{node.get('name')}'")
+                # ── Final safety pass: ensure AI Agent nodes have promptType ──
+                for node in workflow.get("nodes", []):
+                    if "langchain.agent" in node.get("type", ""):
+                        if "parameters" not in node:
+                            node["parameters"] = {}
+                        if not node["parameters"].get("promptType"):
+                            node["parameters"]["promptType"] = "auto"
+                            print(f"  🔧 Post-gen: injected promptType=auto for '{node.get('name')}'")
 
-                except Exception as gen_err:
-                    print(f"❌ Generation error: {gen_err}")
-                    import traceback
+            except Exception as gen_err:
+                print(f"❌ Generation error: {gen_err}")
+                import traceback
 
-                    traceback.print_exc()
-                    return (
-                        jsonify(
-                            {
-                                "success": False,
-                                "error": f"Workflow generation failed: {str(gen_err)}",
-                                "workflow": None,
-                            }
-                        ),
-                        500,
-                    )
+                traceback.print_exc()
+                return (
+                    jsonify(
+                        {
+                            "success": False,
+                            "error": f"Workflow generation failed: {str(gen_err)}",
+                            "workflow": None,
+                        }
+                    ),
+                    500,
+                )
 
         # ── Response ─────────────────────────────────────────────────
         if not workflow:
@@ -3888,6 +3423,6 @@ def chat_query_documents():
 if __name__ == "__main__":
     PORT = int(os.environ.get("PORT", 10000))
     HOST = "0.0.0.0"
-    debug = True
+    debug = False
     print("✅ Database tables created")
     app.run(host=HOST, port=PORT, debug=debug)
