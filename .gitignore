@@ -38,3 +38,5 @@ AgentFlow-backend/samplw.json
 # OS files
 .DS_Store
 Thumbs.db
+
+*.sql
